@@ -179,8 +179,8 @@ const ReportDrawer = ({ operator, onClose }) => {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 ['Seats sold (all sources)', report.totals.seats],
-                ['ZI Bus sales', money(report.totals.zibusGross)],
-                ['ZI Bus commission', money(report.totals.commission)],
+                ['Ludo Hut Bus sales', money(report.totals.zibusGross)],
+                ['Ludo Hut Bus commission', money(report.totals.commission)],
                 ['Payable to operator', money(report.totals.payout)],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl border border-slate-100 bg-white p-4">
@@ -192,14 +192,14 @@ const ReportDrawer = ({ operator, onClose }) => {
             <div className="overflow-x-auto rounded-2xl border border-slate-100 bg-white">
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead className="bg-slate-50 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                  <tr><th className="px-4 py-3">Bus</th><th className="px-4 py-3">Seats by source</th><th className="px-4 py-3">ZI Bus sales</th><th className="px-4 py-3">Commission</th><th className="px-4 py-3">Payout</th></tr>
+                  <tr><th className="px-4 py-3">Bus</th><th className="px-4 py-3">Seats by source</th><th className="px-4 py-3">Ludo Hut Bus sales</th><th className="px-4 py-3">Commission</th><th className="px-4 py-3">Payout</th></tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {report.buses.map((bus) => (
                     <tr key={bus.busServiceId}>
                       <td className="px-4 py-3"><p className="font-black text-slate-900">{bus.busName}</p><p className="text-xs text-slate-500">{bus.registrationNumber}</p></td>
                       <td className="px-4 py-3 text-xs font-semibold text-slate-600">
-                        {bus.seatsBySource.length ? bus.seatsBySource.map((row) => `${row.source === 'user' ? 'ZI Bus app' : row.source}: ${row.seats}`).join(' · ') : '—'}
+                        {bus.seatsBySource.length ? bus.seatsBySource.map((row) => `${row.source === 'user' ? 'Ludo Hut Bus app' : row.source}: ${row.seats}`).join(' · ') : '—'}
                       </td>
                       <td className="px-4 py-3 font-semibold">{money(bus.zibusGross)}</td>
                       <td className="px-4 py-3 font-semibold">{money(bus.commission)} <span className="text-xs text-slate-400">({bus.commissionPercent}%)</span></td>
@@ -210,7 +210,7 @@ const ReportDrawer = ({ operator, onClose }) => {
               </table>
             </div>
             <p className="text-xs font-semibold text-slate-500">
-              Commission applies to tickets sold in the ZI Bus app. A rate set on a bus in Bus Commission overrides the company default.
+              Commission applies to tickets sold in the Ludo Hut Bus app. A rate set on a bus in Bus Commission overrides the company default.
             </p>
           </>
         )}
@@ -247,10 +247,10 @@ const BusOperators = () => {
       <div className="mx-auto max-w-6xl space-y-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-blue-600">ZI Bus · Operators</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-blue-600">Ludo Hut Bus · Operators</p>
             <h1 className="mt-2 text-3xl font-black tracking-tight text-slate-900">Bus Operators</h1>
             <p className="mt-2 max-w-2xl text-sm font-medium text-slate-500">
-              Bus companies on ZI Bus: their logins, their buses, and what they are owed.
+              Bus companies on Ludo Hut Bus: their logins, their buses, and what they are owed.
             </p>
           </div>
           <button type="button" onClick={() => setEditing({})} className="flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs font-black text-white">

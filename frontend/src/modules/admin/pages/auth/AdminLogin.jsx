@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ShieldCheck, Mail, Lock, Loader2, AlertCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { Mail, Lock, Loader2, AlertCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { adminService } from '../../services/adminService';
 import { useSettings } from '../../../../shared/context/SettingsContext';
@@ -45,7 +45,7 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   const appLogo = settings.general?.logo || settings.customization?.logo;
-  const appName = settings.general?.app_name || 'ZI CAB';
+  const appName = settings.general?.app_name || 'Ludo Hut';
 
   const switchView = (next) => {
     setError('');
@@ -112,9 +112,7 @@ const AdminLogin = () => {
               {appLogo ? (
                 <img src={appLogo} alt={appName} className="h-11 w-auto object-contain" />
               ) : (
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-900 text-white">
-                  <ShieldCheck size={22} />
-                </span>
+                <img src="/ludohut-logo.png" alt={appName} className="h-28 w-auto object-contain" />
               )}
             </button>
             <h1 className="text-[22px] font-semibold text-slate-900">

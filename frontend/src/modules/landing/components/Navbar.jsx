@@ -107,7 +107,7 @@ const Navbar = ({ activeTab, setActiveTab, openBookingModal }) => {
       )}
 
       <style>{`
-        .zicab-landing {
+        .ludohut-landing {
           .navbar-header {
             background-color: #0B1F3A;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -160,7 +160,7 @@ const Navbar = ({ activeTab, setActiveTab, openBookingModal }) => {
           .logo-cab {
             font-size: 26px;
             font-weight: 800;
-            color: #00BBA9;
+            color: #1C9BD0;
             margin-left: 4px;
             letter-spacing: 1px;
           }
@@ -192,7 +192,7 @@ const Navbar = ({ activeTab, setActiveTab, openBookingModal }) => {
           }
 
           .nav-link-btn:hover {
-            color: #00BBA9;
+            color: #1C9BD0;
           }
 
           .nav-link-btn.active {
@@ -207,7 +207,7 @@ const Navbar = ({ activeTab, setActiveTab, openBookingModal }) => {
             transform: translateX(-50%);
             width: 18px;
             height: 3px;
-            background-color: #00BBA9;
+            background-color: #1C9BD0;
             border-radius: 2px;
           }
 
@@ -259,9 +259,9 @@ const Navbar = ({ activeTab, setActiveTab, openBookingModal }) => {
           }
 
           .mobile-nav-item.active {
-            background: rgba(0, 187, 169, 0.15);
-            border-color: #00BBA9;
-            color: #00BBA9;
+            background: rgba(28, 155, 208, 0.15);
+            border-color: #1C9BD0;
+            color: #1C9BD0;
           }
 
           .mobile-drawer-cta {

@@ -280,7 +280,7 @@ export const AdminAdminCreate = lazy(() => import('../modules/admin/pages/manage
 export const AdminUserAppManagement = lazy(() => import('../modules/admin/pages/settings/AdminUserAppManagement'));
 export const UserAppLayout = lazy(() => import('../modules/user/components/UserAppLayout'));
 
-// ZI Bus dhaba partner panel
+// Ludo Hut Bus dhaba partner panel
 export const DhabaLogin = lazy(() => import('../modules/dhaba/pages/DhabaLogin'));
 export const DhabaLayout = lazy(() => import('../modules/dhaba/pages/DhabaLayout'));
 export const DhabaOrders = lazy(() => import('../modules/dhaba/pages/DhabaOrders'));

@@ -52,9 +52,9 @@ const SeatInventory = () => {
     <div className="min-h-screen bg-[#F8F9FA] p-6 lg:p-8">
       <div className="mx-auto max-w-6xl space-y-6">
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-blue-600">ZI Bus · Inventory</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-blue-600">Ludo Hut Bus · Inventory</p>
           <h1 className="mt-2 text-3xl font-black tracking-tight text-slate-900">Seat Inventory & Manifest</h1>
-          <p className="mt-2 text-sm font-medium text-slate-500">Live seat count for one run across ZI Bus and every connected channel.</p>
+          <p className="mt-2 text-sm font-medium text-slate-500">Live seat count for one run across Ludo Hut Bus and every connected channel.</p>
         </div>
 
         <form onSubmit={load} className="flex flex-wrap items-end gap-3 rounded-2xl border border-slate-100 bg-white p-4 print:hidden">
@@ -137,7 +137,7 @@ const SeatInventory = () => {
                   <span className="text-sm font-semibold text-slate-500">No seats sold yet.</span>
                 ) : inventory.bookedBySource.map((row) => (
                   <span key={row.source} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-black text-slate-700">
-                    {row.source === 'zibus' ? 'ZI Bus' : row.source}: {row.seats}
+                    {row.source === 'zibus' ? 'Ludo Hut Bus' : row.source}: {row.seats}
                   </span>
                 ))}
               </div>

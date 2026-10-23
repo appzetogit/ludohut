@@ -79,7 +79,7 @@ const Services = ({ openBookingModal }) => {
                   <div className="s-card-content">
                     <div className="s-title-row">
                       <div className="s-icon-bg">
-                        <IconComp size={22} color="#00BBA9" />
+                        <IconComp size={22} color="#1C9BD0" />
                       </div>
                       <h3 className="s-title">{s.title}</h3>
                     </div>
@@ -92,7 +92,7 @@ const Services = ({ openBookingModal }) => {
                       <div className="s-features-list">
                         {s.features.map((feat, i) => (
                           <div key={i} className="sf-item">
-                            <CheckCircle size={15} color="#00BBA9" />
+                            <CheckCircle size={15} color="#1C9BD0" />
                             <span>{feat}</span>
                           </div>
                         ))}
@@ -111,7 +111,7 @@ const Services = ({ openBookingModal }) => {
       </section>
 
       <style>{`
-        .zicab-landing {
+        .ludohut-landing {
           .services-list-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -132,7 +132,7 @@ const Services = ({ openBookingModal }) => {
           .service-detail-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
-            border-color: #00BBA9;
+            border-color: #1C9BD0;
           }
 
           .s-card-img-box {
@@ -153,12 +153,12 @@ const Services = ({ openBookingModal }) => {
             right: 14px;
             background: rgba(7, 21, 43, 0.85);
             backdrop-filter: blur(6px);
-            color: #00BBA9;
+            color: #1C9BD0;
             font-size: 11.5px;
             font-weight: 600;
             padding: 4px 12px;
             border-radius: 20px;
-            border: 1px solid rgba(0, 187, 169, 0.4);
+            border: 1px solid rgba(28, 155, 208, 0.4);
           }
 
           .s-card-content {
@@ -178,7 +178,7 @@ const Services = ({ openBookingModal }) => {
           .s-icon-bg {
             width: 40px;
             height: 40px;
-            background: rgba(0, 187, 169, 0.1);
+            background: rgba(28, 155, 208, 0.1);
             border-radius: 10px;
             display: flex;
             align-items: center;

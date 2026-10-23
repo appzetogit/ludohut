@@ -26,7 +26,7 @@ const Check = ({ checked, indeterminate = false, onChange, label, bold = false }
         if (el) el.indeterminate = indeterminate;
       }}
       onChange={onChange}
-      className="h-3.5 w-3.5 accent-[#FFC400]"
+      className="h-3.5 w-3.5 accent-[#1C9BD0]"
     />
     <span className={`text-xs ${bold ? 'font-semibold text-[#0B1220]' : 'text-slate-600'}`}>{label}</span>
   </label>
@@ -297,7 +297,7 @@ const AdminAccountForm = ({
         <button
           type="submit"
           disabled={saving}
-          className="admin-btn-primary h-10 min-w-[140px] !bg-[#FFC400] !text-[#0B1220]"
+          className="admin-btn-primary h-10 min-w-[140px] !bg-[#1C9BD0] !text-[#0B1220]"
         >
           {saving ? <Loader2 size={16} className="animate-spin" /> : mode === 'create' ? 'Create admin' : 'Save changes'}
         </button>

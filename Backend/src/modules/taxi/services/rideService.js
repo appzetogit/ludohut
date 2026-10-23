@@ -2622,7 +2622,7 @@ export const enableRideBidding = async ({ rideId, userId, userMaxBidFare }) => {
   // their own fare. Older app builds still offer "let captains bid" on a
   // parcel; they get this instead of a switch to a mode we no longer run.
   if (policy.mode !== 'driver_bid') {
-    throw new ApiError(409, 'Captains do not bid on ZI CAB. Use Raise fare to reach more captains.');
+    throw new ApiError(409, 'Captains do not bid on Ludo Hut. Use Raise fare to reach more captains.');
   }
 
   const baseFare = Math.max(0, Math.round(Number(ride.baseFare || ride.fare || 0)));

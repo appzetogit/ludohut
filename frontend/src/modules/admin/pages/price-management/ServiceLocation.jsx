@@ -42,7 +42,7 @@ const defaultFormData = {
   timezone: ''
 };
 
-const inputClass = "w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800 bg-white focus:border-[#FFC400] focus:ring-2 focus:ring-[#FFC400]/20 outline-none transition-all placeholder:text-gray-300";
+const inputClass = "w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-800 bg-white focus:border-[#1C9BD0] focus:ring-2 focus:ring-[#1C9BD0]/20 outline-none transition-all placeholder:text-gray-300";
 const labelClass = "block text-xs font-bold text-gray-500 mb-2";
 const getCountryName = (value) => {
   if (value == null) return '';
@@ -426,7 +426,7 @@ const ServiceLocation = ({ mode }) => {
                     className={`rounded-lg border p-3 text-left shadow-sm transition-all ${
                       selectedJurisdiction?.name === item.name
                         ? 'border-yellow- bg-yellow-/70'
-                        : 'border-gray-100 bg-gray-50/60 hover:border-[#FFC400] hover:bg-[#FFC400]/10'
+                        : 'border-gray-100 bg-gray-50/60 hover:border-[#1C9BD0] hover:bg-[#1C9BD0]/10'
                     }`}
                   >
                     <div className="flex items-start justify-between gap-4">
@@ -508,7 +508,7 @@ const ServiceLocation = ({ mode }) => {
               </div>
               <button 
                 onClick={() => navigate('/admin/pricing/service-location/add')}
-                className="flex items-center gap-2 px-5 py-2.5 bg-[#FFC400] text-[#0B1220] rounded-xl text-sm font-semibold hover:brightness-95 transition-all shadow-md active:scale-95"
+                className="flex items-center gap-2 px-5 py-2.5 bg-[#1C9BD0] text-[#0B1220] rounded-xl text-sm font-semibold hover:brightness-95 transition-all shadow-md active:scale-95"
               >
                 <Plus size={18} /> Add Location
               </button>
@@ -528,15 +528,15 @@ const ServiceLocation = ({ mode }) => {
                 onClick={i === 0 ? () => navigate('/admin/pricing/service-location/jurisdictions') : undefined}
                 className={`bg-white p-2 rounded-lg border border-gray-100 shadow-sm flex items-center gap-4 group transition-colors text-left ${
                   i === 0
-                    ? 'cursor-pointer hover:border-[#FFC400] hover:bg-[#FFC400]/10 active:scale-[0.99]'
+                    ? 'cursor-pointer hover:border-[#1C9BD0] hover:bg-[#1C9BD0]/10 active:scale-[0.99]'
                     : 'cursor-default'
                 }`}
               >
-                <div className={`w-8 h-8 rounded-lg bg-[#FFC400]/10 flex items-center justify-center text-[#FFC400] border border-[#FFC400]/20 shadow-sm group-hover:scale-110 transition-transform`}>
+                <div className={`w-8 h-8 rounded-lg bg-[#1C9BD0]/10 flex items-center justify-center text-[#1C9BD0] border border-[#1C9BD0]/20 shadow-sm group-hover:scale-110 transition-transform`}>
                   <stat.icon size={16} />
                 </div>
                 <div>
-                  <p className={`text-[10px] font-black uppercase tracking-widest ${i === 0 ? 'text-[#FFC400]' : 'text-gray-400'}`}>{stat.label}</p>
+                  <p className={`text-[10px] font-black uppercase tracking-widest ${i === 0 ? 'text-[#1C9BD0]' : 'text-gray-400'}`}>{stat.label}</p>
                   <h3 className="text-xl font-black text-gray-900">{stat.value}</h3>
                 </div>
               </button>
@@ -578,7 +578,7 @@ const ServiceLocation = ({ mode }) => {
                       <tr key={l._id || l.id} className="hover:bg-gray-50/20 transition-colors group">
                         <td className="px-4 py-3">
                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-xl bg-[#FFC400]/10 flex items-center justify-center text-[#FFC400] border border-[#FFC400]/20 shadow-sm group-hover:rotate-6 transition-transform"><MapPin size={18} /></div>
+                              <div className="w-10 h-10 rounded-xl bg-[#1C9BD0]/10 flex items-center justify-center text-[#1C9BD0] border border-[#1C9BD0]/20 shadow-sm group-hover:rotate-6 transition-transform"><MapPin size={18} /></div>
                               <span className="text-sm font-bold text-gray-900 leading-tight">{l.name || l.service_location_name}</span>
                            </div>
                         </td>
@@ -605,7 +605,7 @@ const ServiceLocation = ({ mode }) => {
                         </td>
                         <td className="px-4 py-3">
                            <div className="flex items-center justify-end gap-2">
-                             <button onClick={() => navigate(`/admin/pricing/service-location/edit/${l._id || l.id}`)} className="p-2 text-gray-400 hover:text-[#0B1220] hover:bg-[#FFC400] rounded-xl transition-all shadow-sm"><Edit2 size={16} /></button>
+                             <button onClick={() => navigate(`/admin/pricing/service-location/edit/${l._id || l.id}`)} className="p-2 text-gray-400 hover:text-[#0B1220] hover:bg-[#1C9BD0] rounded-xl transition-all shadow-sm"><Edit2 size={16} /></button>
                              <button onClick={() => handleDelete(l._id || l.id)} className="p-2 text-gray-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-all shadow-sm"><Trash2 size={16} /></button>
                            </div>
                         </td>

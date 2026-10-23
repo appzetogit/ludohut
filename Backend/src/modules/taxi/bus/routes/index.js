@@ -78,7 +78,7 @@ import { authenticateChannel } from '../services/busChannelService.js';
 
 export const busModuleRouter = Router();
 
-// Passenger (ZI Bus app)
+// Passenger (Ludo Hut Bus app)
 const asUser = authenticate(['user']);
 busModuleRouter.get('/users/buses/:id/dhabas', asUser, asyncHandler(listTripDhabas));
 busModuleRouter.get('/users/bus-bookings/:id/ticket', asUser, asyncHandler(getMyBusTicket));

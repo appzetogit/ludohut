@@ -1576,7 +1576,7 @@ const ActiveTrip = () => {
                 {
                     status: 'completed',
                     paymentMethod: paymentMode || undefined,
-                    // Money went to the driver's own UPI, not to ZI CAB: settle
+                    // Money went to the driver's own UPI, not to Ludo Hut: settle
                     // it like cash (commission from the driver's wallet).
                     collectedVia:
                         paymentMode === 'online' && paymentQr?.providerMode === 'driver_upi' ? 'upi' : undefined,

@@ -25,7 +25,7 @@ const PhoneRegistration = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { settings } = useSettings();
-  const appName = settings.general?.app_name || 'Appzeto 24 Trawler';
+  const appName = settings.general?.app_name || 'Ludo Hut';
   const appLogo = settings.general?.logo || settings.customization?.logo || settings.general?.favicon || '';
   const storedSession = getStoredDriverRegistrationSession();
   const isOwnerPortal = location.pathname.startsWith('/taxi/owner');
@@ -319,7 +319,7 @@ const PhoneRegistration = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm font-black text-slate-900">Dhaba owner?</p>
-                  <p className="text-xs font-medium text-slate-500">Take food pre-orders from ZI Bus passengers.</p>
+                  <p className="text-xs font-medium text-slate-500">Take food pre-orders from Ludo Hut Bus passengers.</p>
                 </div>
               </div>
               <div className="mt-4 grid grid-cols-2 gap-2">

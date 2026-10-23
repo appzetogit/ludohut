@@ -9,12 +9,12 @@ import { cancelChannelBooking, createChannelBooking } from './busChannelService.
 
 // Pull-side synchronisation for channels we poll (operator reservation
 // software that can't call us). Each cycle reads the channel's bookings for
-// every mapped run over the next few days and makes ZI Bus match:
+// every mapped run over the next few days and makes Ludo Hut Bus match:
 //   - a seat they sold that we don't have  -> locked here as a channel sale
 //   - a seat we hold for them they no longer list -> released here
 // Each pulled seat is its own channel booking ("<their ref>/<seat>"), so a
 // booking that gains or loses seats on their side reconciles seat by seat.
-// If they sold a seat ZI Bus had already sold, nothing is overwritten: the
+// If they sold a seat Ludo Hut Bus had already sold, nothing is overwritten: the
 // clash is logged as a double-sale conflict for the operator to resolve.
 
 const DAY_LABELS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -104,7 +104,7 @@ const reconcileTripDate = async ({ channel, connector, mapping, busService, trav
     });
   }
 
-  // Seats they sold that ZI Bus doesn't show as theirs yet.
+  // Seats they sold that Ludo Hut Bus doesn't show as theirs yet.
   for (const [seatId, booking] of wanted) {
     try {
       await createChannelBooking(channel, {
@@ -127,7 +127,7 @@ const reconcileTripDate = async ({ channel, connector, mapping, busService, trav
           travelDate,
           seatIds: [seatId],
           externalRef: booking.externalRef,
-          lastError: `Seat ${seatId} is sold on ZI Bus and also on ${channel.name}`,
+          lastError: `Seat ${seatId} is sold on Ludo Hut Bus and also on ${channel.name}`,
         });
       } else {
         throw error;

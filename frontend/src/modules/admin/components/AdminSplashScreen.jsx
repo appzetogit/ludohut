@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { useSettings } from '../../../shared/context/SettingsContext';
 
 const AdminSplashScreen = () => {
@@ -14,7 +14,7 @@ const AdminSplashScreen = () => {
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#FAFAFA]"
     >
-      {/* Subtle Yellow Glow Background */}
+      {/* Subtle brand glow (yellow-* maps to Ludo Hut blue in the admin) */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
         <div className="w-[600px] h-[600px] bg-yellow-400/10 rounded-full blur-[100px] opacity-70 animate-pulse" />
       </div>
@@ -29,11 +29,7 @@ const AdminSplashScreen = () => {
         >
           <div className="absolute inset-0 bg-yellow-400/20 blur-2xl rounded-full scale-150 animate-pulse" />
           <div className="relative flex items-center justify-center w-28 h-28 bg-white rounded-3xl shadow-xl shadow-yellow-900/5 border border-yellow-100 p-4">
-            {logoUrl ? (
-              <img src={logoUrl} alt="Logo" className="w-full h-full object-contain" />
-            ) : (
-              <ShieldCheck size={56} className="text-yellow-500" />
-            )}
+            <img src={logoUrl || '/ludohut-mark.png'} alt="Logo" className="w-full h-full object-contain" />
           </div>
         </motion.div>
 

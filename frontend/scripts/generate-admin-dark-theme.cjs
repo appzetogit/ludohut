@@ -17,7 +17,9 @@ const HUES = {
   rose: ['244,63,94', '#fb7185'],
   orange: ['249,115,22', '#fb923c'],
   amber: ['245,158,11', '#fbbf24'],
-  yellow: ['234,179,8', '#facc15'],
+  // yellow and indigo are the admin's brand accents, remapped to Ludo Hut blue
+  // (see the palette override in adminTheme.css).
+  yellow: ['28,155,208', '#7ACFE9'],
   lime: ['132,204,22', '#a3e635'],
   green: ['34,197,94', '#4ade80'],
   emerald: ['16,185,129', '#34d399'],
@@ -25,7 +27,7 @@ const HUES = {
   cyan: ['6,182,212', '#67e8f9'],
   sky: ['14,165,233', '#7dd3fc'],
   blue: ['59,130,246', '#93c5fd'],
-  indigo: ['99,102,241', '#a5b4fc'],
+  indigo: ['15,129,182', '#7ACFE9'],
   violet: ['139,92,246', '#c4b5fd'],
   purple: ['168,85,247', '#d8b4fe'],
   fuchsia: ['217,70,239', '#f0abfc'],

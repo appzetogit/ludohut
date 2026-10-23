@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
-// An external system that sells seats on ZI Bus inventory: another booking
-// platform, or an operator's own reservation/counter software. ZI Bus is the
+// An external system that sells seats on Ludo Hut Bus inventory: another booking
+// platform, or an operator's own reservation/counter software. Ludo Hut Bus is the
 // single source of truth for the seat map. A channel pushes its sales in
 // through the channel API (and they lock the same seats our riders see), and
 // it receives our sales and cancellations on its webhook so it can mirror them.
@@ -52,7 +52,7 @@ const busChannelSchema = new mongoose.Schema(
     },
     // How bookings get from the channel to us. 'push_api': the channel calls
     // our channel API itself. Anything else is a connector we run: we poll
-    // the channel's own system and reconcile its seat sales into ZI Bus (see
+    // the channel's own system and reconcile its seat sales into Ludo Hut Bus (see
     // bus/connectors). Used for operator software that can't call us.
     connector: {
       type: {
@@ -72,7 +72,7 @@ const busChannelSchema = new mongoose.Schema(
       lastPolledAt: { type: Date, default: null },
       lastPollStatus: { type: String, default: '' },
     },
-    // Which of the channel's own trips is which ZI Bus run.
+    // Which of the channel's own trips is which Ludo Hut Bus run.
     tripMappings: {
       type: [
         new mongoose.Schema(

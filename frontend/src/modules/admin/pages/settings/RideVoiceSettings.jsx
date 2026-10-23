@@ -45,8 +45,8 @@ const Toggle = ({ checked, onChange }) => (
   <button
     type="button"
     onClick={onChange}
-    className={`w-14 h-7 rounded-full relative transition-colors duration-300 shrink-0 focus:outline-none focus:ring-2 focus:ring-[#F4B400] focus:ring-offset-2 ${
-      checked ? 'bg-[#F4B400]' : 'bg-gray-300'
+    className={`w-14 h-7 rounded-full relative transition-colors duration-300 shrink-0 focus:outline-none focus:ring-2 focus:ring-[#0F81B6] focus:ring-offset-2 ${
+      checked ? 'bg-[#0F81B6]' : 'bg-gray-300'
     }`}
   >
     <div
@@ -121,7 +121,7 @@ const RideVoiceSettings = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F5F6F8]">
-        <Loader2 className="w-10 h-10 text-[#F4B400] animate-spin" />
+        <Loader2 className="w-10 h-10 text-[#0F81B6] animate-spin" />
       </div>
     );
   }
@@ -135,7 +135,7 @@ const RideVoiceSettings = () => {
     const missing = ADDABLE_LANGUAGES.filter((c) => !codes.includes(c));
 
     return (
-      <div className="bg-white rounded-[20px] shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#F4B400] overflow-hidden">
+      <div className="bg-white rounded-[20px] shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#0F81B6] overflow-hidden">
         <div className="p-6">
           <div className="flex items-start justify-between gap-6 mb-6">
             <div>
@@ -156,7 +156,7 @@ const RideVoiceSettings = () => {
                 min="0"
                 value={section[triggerKey] ?? ''}
                 onChange={(e) => setSection(key, { [triggerKey]: e.target.value })}
-                className="flex-1 bg-white border border-[#E5E7EB] rounded-l-lg py-3 px-4 text-sm text-[#151515] font-medium focus:border-[#F4B400] focus:ring-1 focus:ring-[#F4B400] transition-all outline-none"
+                className="flex-1 bg-white border border-[#E5E7EB] rounded-l-lg py-3 px-4 text-sm text-[#151515] font-medium focus:border-[#0F81B6] focus:ring-1 focus:ring-[#0F81B6] transition-all outline-none"
               />
               <div className="px-4 bg-[#F5F6F8] border border-[#E5E7EB] border-l-0 rounded-r-lg flex items-center text-gray-500 text-sm font-semibold">
                 min
@@ -197,7 +197,7 @@ const RideVoiceSettings = () => {
                   rows={3}
                   value={messages[code]}
                   onChange={(e) => setMessage(key, code, e.target.value)}
-                  className="w-full bg-white border border-[#E5E7EB] rounded-lg py-3 px-4 text-sm text-[#151515] leading-relaxed focus:border-[#F4B400] focus:ring-1 focus:ring-[#F4B400] transition-all outline-none resize-y"
+                  className="w-full bg-white border border-[#E5E7EB] rounded-lg py-3 px-4 text-sm text-[#151515] leading-relaxed focus:border-[#0F81B6] focus:ring-1 focus:ring-[#0F81B6] transition-all outline-none resize-y"
                 />
               </div>
             ))}
@@ -209,7 +209,7 @@ const RideVoiceSettings = () => {
                   <button
                     key={code}
                     onClick={() => addLanguage(key, code)}
-                    className="flex items-center gap-1 bg-[#F5F6F8] border border-[#E5E7EB] rounded-full px-3 py-1.5 text-xs font-semibold text-gray-700 hover:border-[#F4B400] transition-colors"
+                    className="flex items-center gap-1 bg-[#F5F6F8] border border-[#E5E7EB] rounded-full px-3 py-1.5 text-xs font-semibold text-gray-700 hover:border-[#0F81B6] transition-colors"
                   >
                     <Plus size={12} /> {LANGUAGE_LABELS[code] || code}
                   </button>
@@ -233,7 +233,7 @@ const RideVoiceSettings = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="w-1.5 h-8 bg-[#F4B400] rounded-full"></div>
+            <div className="w-1.5 h-8 bg-[#0F81B6] rounded-full"></div>
             <div>
               <h1 className="text-2xl font-bold text-[#151515]">Ride Voice Announcements</h1>
               <p className="text-sm text-gray-500 mt-1">
@@ -245,13 +245,13 @@ const RideVoiceSettings = () => {
 
         <div
           className={`bg-white rounded-2xl shadow-sm border-l-4 transition-all duration-300 ${
-            isEnabled ? 'border-l-[#F4B400] border-t border-r border-b border-[#E5E7EB]' : 'border-[#E5E7EB]'
+            isEnabled ? 'border-l-[#0F81B6] border-t border-r border-b border-[#E5E7EB]' : 'border-[#E5E7EB]'
           }`}
         >
           <div className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div>
               <h3 className="text-lg font-bold text-[#151515] flex items-center gap-2">
-                <Volume2 size={20} className="text-[#F4B400]" /> Voice announcements
+                <Volume2 size={20} className="text-[#0F81B6]" /> Voice announcements
               </h3>
               <p className="text-sm text-gray-500 mt-1">
                 Master switch. Turning this off stops every announcement across all riders.
@@ -322,7 +322,7 @@ const RideVoiceSettings = () => {
                   step={f.step}
                   value={settings.speech?.[f.key] ?? f.min}
                   onChange={(e) => setSection('speech', { [f.key]: Number(e.target.value) })}
-                  className="w-full accent-[#F4B400]"
+                  className="w-full accent-[#0F81B6]"
                 />
               </div>
             ))}
@@ -333,7 +333,7 @@ const RideVoiceSettings = () => {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="bg-[#F4B400] text-[#151515] px-8 py-3 rounded-xl text-sm font-bold shadow-md flex items-center gap-2 hover:bg-[#E0A800] hover:shadow-lg active:scale-95 transition-all disabled:opacity-50"
+            className="bg-[#0F81B6] text-[#151515] px-8 py-3 rounded-xl text-sm font-bold shadow-md flex items-center gap-2 hover:bg-[#E0A800] hover:shadow-lg active:scale-95 transition-all disabled:opacity-50"
           >
             {saving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
             {saving ? 'Saving...' : 'Save Settings'}

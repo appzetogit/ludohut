@@ -117,9 +117,9 @@ const BusBookingDetail = () => {
   const rules = booking.cancellationPolicy?.rules || [];
 
   const share = async () => {
-    const text = `ZI Bus ticket ${pnr}: ${bus.fromCity} to ${bus.toCity}, ${formatDay(booking.travelDate)} ${bus.departure || ''}. Seat ${activeLabels.join(', ')}.`;
+    const text = `Ludo Hut Bus ticket ${pnr}: ${bus.fromCity} to ${bus.toCity}, ${formatDay(booking.travelDate)} ${bus.departure || ''}. Seat ${activeLabels.join(', ')}.`;
     try {
-      if (navigator.share) await navigator.share({ title: 'ZI Bus ticket', text });
+      if (navigator.share) await navigator.share({ title: 'Ludo Hut Bus ticket', text });
       else {
         await navigator.clipboard?.writeText(text);
         toast.success('Ticket details copied');

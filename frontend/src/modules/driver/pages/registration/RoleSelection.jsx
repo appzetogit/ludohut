@@ -55,7 +55,7 @@ const ROLE_OPTIONS = [
   {
     id: 'dhaba_owner',
     label: 'Dhaba Owner',
-    description: 'Register your highway dhaba to take food pre-orders from ZI Bus passengers.',
+    description: 'Register your highway dhaba to take food pre-orders from Ludo Hut Bus passengers.',
     Icon: UtensilsCrossed,
     color: 'text-orange-500',
   },

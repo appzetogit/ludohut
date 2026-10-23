@@ -45,14 +45,14 @@ export const loginDhaba = async (req, res) => {
     throw new ApiError(401, 'Incorrect phone or password');
   }
   if (dhaba.approvalStatus === 'pending') {
-    throw new ApiError(403, 'Your registration is under review. You can sign in once ZI Bus approves it.');
+    throw new ApiError(403, 'Your registration is under review. You can sign in once Ludo Hut Bus approves it.');
   }
   if (dhaba.approvalStatus === 'rejected') {
     const reason = dhaba.rejectionReason ? ` Reason: ${dhaba.rejectionReason}` : '';
     throw new ApiError(403, `Your registration was not approved.${reason} You can register again with corrected details.`);
   }
   if (dhaba.active === false) {
-    throw new ApiError(403, 'This dhaba account has been deactivated. Contact ZI Bus support.');
+    throw new ApiError(403, 'This dhaba account has been deactivated. Contact Ludo Hut Bus support.');
   }
 
   dhaba.lastLoginAt = new Date();

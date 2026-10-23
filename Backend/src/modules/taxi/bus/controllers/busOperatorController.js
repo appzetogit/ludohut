@@ -106,7 +106,7 @@ export const adminUpdateOperator = async (req, res) => {
 };
 
 /// Sales and settlement for one company over a date range (travel dates),
-/// split by where each ticket was sold. Commission applies to ZI Bus sales.
+/// split by where each ticket was sold. Commission applies to Ludo Hut Bus sales.
 export const adminOperatorReport = async (req, res) => {
   const operator = await BusOperator.findById(req.params.id).lean();
   if (!operator) throw new ApiError(404, 'Operator not found');

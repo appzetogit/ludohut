@@ -38,7 +38,7 @@ import {
   isDriverAvailable,
 } from "../../utils/mapUtils";
 
-const inputClass = "w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-800 bg-white focus:border-[#FFC400] focus:ring-1 focus:ring-[#FFC400] outline-none transition-colors";
+const inputClass = "w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-800 bg-white focus:border-[#1C9BD0] focus:ring-1 focus:ring-[#1C9BD0] outline-none transition-colors";
 const labelClass = "block text-xs font-semibold text-gray-500 mb-1.5";
 const cardClass = "bg-white rounded-xl border border-gray-200 p-6 shadow-sm";
 const ADMIN_LANGUAGE_OPTIONS = ['English', 'Hindi', 'Arabic', 'French', 'Spanish'];
@@ -481,7 +481,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                 <button 
                   type="button"
                   onClick={(e) => { e.preventDefault(); e.stopPropagation(); navigate("/admin/pricing/zone/create"); }}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#FFC400] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm relative z-50"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#1C9BD0] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm relative z-50"
                 >
                   <Plus size={16} /> Add Market Zone
                 </button>
@@ -500,7 +500,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                </div>
                <button 
                  onClick={() => setEnablePeakZoneGlobal(!enablePeakZoneGlobal)}
-                 className={`relative w-11 h-6 rounded-full transition-colors ${enablePeakZoneGlobal ? 'bg-[#FFC400]' : 'bg-gray-200'}`}
+                 className={`relative w-11 h-6 rounded-full transition-colors ${enablePeakZoneGlobal ? 'bg-[#1C9BD0]' : 'bg-gray-200'}`}
                >
                  <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${enablePeakZoneGlobal ? 'translate-x-5' : ''}`} />
                </button>
@@ -515,7 +515,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search zones..." 
-                    className="w-full pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-[#FFC400] focus:border-[#FFC400] transition-all font-medium"
+                    className="w-full pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-[#1C9BD0] focus:border-[#1C9BD0] transition-all font-medium"
                   />
                 </div>
               </div>
@@ -523,7 +523,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
               <div className="overflow-x-auto">
                 {loading ? (
                   <div className="flex flex-col items-center justify-center py-20">
-                    <Loader2 className="animate-spin text-[#FFC400] mb-2" size={32} />
+                    <Loader2 className="animate-spin text-[#1C9BD0] mb-2" size={32} />
                     <p className="text-xs text-gray-400 font-medium">Loading data...</p>
                   </div>
                 ) : filteredZones.length > 0 ? (
@@ -542,7 +542,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                           <td className="px-6 py-4 whitespace-nowrap text-xs font-bold text-gray-400">{(((currentPage - 1) * pageSize) + idx + 1).toString().padStart(2, '0')}</td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center gap-3">
-                              <div className="w-9 h-9 rounded-lg bg-[#FFC400]/10 flex items-center justify-center text-[#FFC400] shadow-sm border border-[#FFC400]/20 transition-transform group-hover:scale-105">
+                              <div className="w-9 h-9 rounded-lg bg-[#1C9BD0]/10 flex items-center justify-center text-[#1C9BD0] shadow-sm border border-[#1C9BD0]/20 transition-transform group-hover:scale-105">
                                 <Target size={16} />
                               </div>
                               <span className="font-semibold text-gray-900">{zone.name || zone.zone_name}</span>
@@ -558,13 +558,13 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-right">
                              <div className="flex items-center justify-end gap-2 relative z-50">
-                               <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); navigate(`/admin/pricing/zone/edit/${zone._id || zone.id}`); }} className="p-2 text-gray-400 hover:text-[#0B1220] hover:bg-[#FFC400] rounded-lg transition-colors"><Edit2 size={14} /></button>
+                               <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); navigate(`/admin/pricing/zone/edit/${zone._id || zone.id}`); }} className="p-2 text-gray-400 hover:text-[#0B1220] hover:bg-[#1C9BD0] rounded-lg transition-colors"><Edit2 size={14} /></button>
                                <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleDelete(zone._id || zone.id); }} className="p-2 text-gray-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"><Trash2 size={14} /></button>
                                <button
                                  type="button"
                                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleExplore(zone); }}
                                  title="Explore Zone"
-                                 className="p-2 text-gray-400 hover:text-[#0B1220] hover:bg-[#FFC400] rounded-lg transition-colors"
+                                 className="p-2 text-gray-400 hover:text-[#0B1220] hover:bg-[#1C9BD0] rounded-lg transition-colors"
                                >
                                  <Globe size={14} />
                                </button>
@@ -592,7 +592,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                     <select
                       value={pageSize}
                       onChange={(e) => setPageSize(Number(e.target.value))}
-                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 outline-none transition-colors focus:border-[#FFC400]"
+                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-700 outline-none transition-colors focus:border-[#1C9BD0]"
                     >
                       {[10, 20, 50].map((size) => (
                         <option key={size} value={size}>{size} / page</option>
@@ -605,7 +605,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                       type="button"
                       onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
                       disabled={currentPage === 1}
-                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-600 transition-colors hover:border-[#FFC400]/50 hover:text-[#0B1220] disabled:cursor-not-allowed disabled:opacity-40"
+                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-600 transition-colors hover:border-[#1C9BD0]/50 hover:text-[#0B1220] disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       Previous
                     </button>
@@ -616,7 +616,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                       type="button"
                       onClick={() => setCurrentPage((page) => Math.min(totalZonePages, page + 1))}
                       disabled={currentPage === totalZonePages}
-                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-600 transition-colors hover:border-[#FFC400]/50 hover:text-[#0B1220] disabled:cursor-not-allowed disabled:opacity-40"
+                      className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-semibold text-gray-600 transition-colors hover:border-[#1C9BD0]/50 hover:text-[#0B1220] disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       Next
                     </button>
@@ -655,7 +655,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
               <div className="xl:col-span-4 space-y-6">
                 <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
                    <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
-                      <div className="w-9 h-9 rounded-lg bg-[#FFC400]/10 flex items-center justify-center text-[#FFC400]">
+                      <div className="w-9 h-9 rounded-lg bg-[#1C9BD0]/10 flex items-center justify-center text-[#1C9BD0]">
                         <Tag size={18} />
                       </div>
                       <div>
@@ -695,11 +695,11 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                               type="button"
                               key={lang}
                               onClick={(e) => { e.preventDefault(); setActiveTab(lang); }}
-                              className={`px-4 py-2 text-xs font-medium transition-colors relative whitespace-nowrap shrink-0 ${activeTab === lang ? 'text-[#FFC400]' : 'text-gray-400 hover:text-gray-600'}`}
+                              className={`px-4 py-2 text-xs font-medium transition-colors relative whitespace-nowrap shrink-0 ${activeTab === lang ? 'text-[#1C9BD0]' : 'text-gray-400 hover:text-gray-600'}`}
                             >
                               {lang}
                               {activeTab === lang && (
-                                <motion.div layoutId="activeTab" className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-[#FFC400]" />
+                                <motion.div layoutId="activeTab" className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-[#1C9BD0]" />
                               )}
                             </button>
                           ))}
@@ -730,7 +730,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                               onClick={() => setBoundaryMode(option.id)}
                               className={`rounded-lg border px-4 py-3 text-sm font-semibold transition-colors ${
                                 boundaryMode === option.id
-                                  ? 'border-[#FFC400] bg-[#FFC400]/10 text-[#0B1220]'
+                                  ? 'border-[#1C9BD0] bg-[#1C9BD0]/10 text-[#0B1220]'
                                   : 'border-gray-200 bg-white text-gray-500 hover:border-gray-300'
                               }`}
                             >
@@ -760,7 +760,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                 <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3 shadow-sm">
                    <button 
                      disabled={saving} onClick={handleSave}
-                     className="w-full py-3 bg-[#FFC400] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm disabled:opacity-50 flex items-center justify-center gap-2"
+                     className="w-full py-3 bg-[#1C9BD0] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm disabled:opacity-50 flex items-center justify-center gap-2"
                    >
                      {saving ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
                      {editingId ? 'Update Zone' : 'Save'}
@@ -851,16 +851,16 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                                  ],
                                },
                                polygonOptions: {
-                                 fillColor: '#FFC400',
+                                 fillColor: '#1C9BD0',
                                  fillOpacity: 0.15,
-                                 strokeColor: '#FFC400',
+                                 strokeColor: '#1C9BD0',
                                  strokeWeight: 2,
                                  editable: true,
                                },
                                circleOptions: {
-                                 fillColor: '#FFC400',
+                                 fillColor: '#1C9BD0',
                                  fillOpacity: 0.12,
-                                 strokeColor: '#FFC400',
+                                 strokeColor: '#1C9BD0',
                                  strokeWeight: 2,
                                  editable: true,
                                },
@@ -870,7 +870,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                            {boundaryMode === 'polygon' && polygonCoords.length > 0 && (
                              <Polygon
                                paths={polygonCoords}
-                               options={{ fillColor: '#FFC400', strokeColor: '#FFC400', strokeWeight: 2, fillOpacity: 0.25, editable: true, draggable: true }}
+                               options={{ fillColor: '#1C9BD0', strokeColor: '#1C9BD0', strokeWeight: 2, fillOpacity: 0.25, editable: true, draggable: true }}
                                onLoad={(polygon) => {
                                  polygonListenersRef.current.forEach((listener) => listener?.remove?.());
                                  polygonListenersRef.current = [];
@@ -896,8 +896,8 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
                                center={circleCenter}
                                radius={Number(circleRadiusMeters)}
                                options={{
-                                 fillColor: '#FFC400',
-                                 strokeColor: '#FFC400',
+                                 fillColor: '#1C9BD0',
+                                 strokeColor: '#1C9BD0',
                                  strokeWeight: 2,
                                  fillOpacity: 0.18,
                                  editable: true,
@@ -945,7 +945,7 @@ const ZoneManagement = ({ mode: initialMode = "list" }) => {
 
                 <div className="bg-gray-900 rounded-xl p-6 text-white overflow-hidden relative shadow-md">
                     <div className="relative z-10">
-                      <h4 className="text-sm mb-2 flex items-center gap-2 font-bold"><MapPin size={16} className="text-[#FFC400]" /> Mapping Intelligence</h4>
+                      <h4 className="text-sm mb-2 flex items-center gap-2 font-bold"><MapPin size={16} className="text-[#1C9BD0]" /> Mapping Intelligence</h4>
                       <p className="text-xs text-gray-300 leading-relaxed">
                         Use the polygon or circle tool at the top of the map to define your zone boundary. Click to place polygon vertices and close the shape, or drop a circle and adjust its radius for a radial market boundary. The red dashed line represents the country boundary for reference.
                       </p>

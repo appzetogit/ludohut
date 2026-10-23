@@ -3,7 +3,7 @@ import { ArrowLeft, Loader2 } from 'lucide-react';
 import { formatDuration } from './zibusFormat';
 import './zibus.css';
 
-// Building blocks shared by every ZI Bus passenger screen. Colours come from
+// Building blocks shared by every Ludo Hut Bus passenger screen. Colours come from
 // zibus.css (zb-* classes), so these stay correct in the app's dark and
 // light themes.
 

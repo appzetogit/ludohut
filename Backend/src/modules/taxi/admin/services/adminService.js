@@ -3749,7 +3749,7 @@ export const forgotPassword = async (email) => {
   // Send real email
   await sendEmail({
     to: email,
-    subject: `Password Reset OTP for ${process.env.APP_NAME || 'Appzeto 24'}`,
+    subject: `Password Reset OTP for ${process.env.APP_NAME || 'Ludo Hut'}`,
     text: `Your OTP for password reset is: ${otp}. It will expire in 10 minutes.`,
     html: `
       <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px; max-width: 500px;">
@@ -3761,7 +3761,7 @@ export const forgotPassword = async (email) => {
         </div>
         <p>This OTP is valid for 10 minutes. If you did not request this, please ignore this email.</p>
         <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
-        <p style="font-size: 12px; color: #666;">Regards,<br>Team ${process.env.APP_NAME || 'Appzeto 24'}</p>
+        <p style="font-size: 12px; color: #666;">Regards,<br>Team ${process.env.APP_NAME || 'Ludo Hut'}</p>
       </div>
     `,
   });
@@ -5458,7 +5458,7 @@ export const updateDriver = async (id, payload, currentAdmin = null) => {
     update.serviceCategories = normalizeDriverServiceCategories(serviceCategoriesValue, update.registerFor || 'taxi');
   }
 
-  // The cab types the driver gets requests for (ZI Cab AC, Non-AC, Cab + ...).
+  // The cab types the driver gets requests for (Ludo Hut AC, Non-AC, Cab + ...).
   // A list replaces the whole enrolment, first entry primary - the same shape
   // onboarding saves. The generic family and icon come from the first type, so
   // an admin correction can't leave the marker or dispatch on the old one.
@@ -12691,6 +12691,6 @@ export const getAdminEarningDetails = async (query = {}) => {
     }
     case 'commission':
     default:
-      return rideResult('Total commission', 'Commission ZI CAB earned on each completed trip.', rides, 'Commission', money(summary.adminCommission));
+      return rideResult('Total commission', 'Commission Ludo Hut earned on each completed trip.', rides, 'Commission', money(summary.adminCommission));
   }
 };

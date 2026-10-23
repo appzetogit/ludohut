@@ -116,7 +116,7 @@ const DatePickerField = ({ label, value, onChange }) => {
         <button
           type="button"
           onClick={openPicker}
-          className="flex h-10 w-full items-center justify-between rounded-lg border border-[#E5E7EB] bg-white px-3 text-xs font-semibold text-slate-700 outline-none transition focus:border-[#FFC400]"
+          className="flex h-10 w-full items-center justify-between rounded-lg border border-[#E5E7EB] bg-white px-3 text-xs font-semibold text-slate-700 outline-none transition focus:border-[#1C9BD0]"
         >
           <span>{formatFilterDate(value)}</span>
           <ChevronDown size={14} className="text-slate-400" />
@@ -350,7 +350,7 @@ const AdminEarnings = () => {
     const total = cash + online || 1;
     return [
       { label: 'Cash', value: cash, percent: Math.round((cash / total) * 100), color: '#3B82F6' },
-      { label: 'Online', value: online, percent: Math.round((online / total) * 100), color: '#FFC400' }
+      { label: 'Online', value: online, percent: Math.round((online / total) * 100), color: '#1C9BD0' }
     ];
   }, [data.results]);
 
@@ -367,7 +367,7 @@ const AdminEarnings = () => {
           </div>
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold text-[#0B1220] tracking-tight">Admin Earnings</h1>
-            <span className="bg-[#FFC400]/20 text-[#0B1220] text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-[#FFC400]/40">
+            <span className="bg-[#1C9BD0]/20 text-[#0B1220] text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-[#1C9BD0]/40">
               Finance
             </span>
           </div>
@@ -392,7 +392,7 @@ const AdminEarnings = () => {
           </button>
           <button
             onClick={handleExport}
-            className="admin-btn-primary h-10 gap-2 !bg-[#FFC400] !text-[#0B1220] hover:brightness-95 text-xs font-semibold"
+            className="admin-btn-primary h-10 gap-2 !bg-[#1C9BD0] !text-[#0B1220] hover:brightness-95 text-xs font-semibold"
           >
             <FileSpreadsheet size={14} />
             <span>Download Report</span>
@@ -447,7 +447,7 @@ const AdminEarnings = () => {
       {/* 3. FILTERS PANEL */}
       <div className="admin-card !p-4 bg-white space-y-4 mb-8 border border-[#E5E7EB]">
         <div className="flex items-center gap-2 pb-2 border-b border-[#F1F5F9]">
-          <SlidersHorizontal size={14} className="text-[#FFC400]" />
+          <SlidersHorizontal size={14} className="text-[#1C9BD0]" />
           <h3 className="text-[11px] font-bold uppercase tracking-wider text-[#0B1220]">Financial Ledger Filtering</h3>
         </div>
         
@@ -500,7 +500,7 @@ const AdminEarnings = () => {
           <div className="flex items-end gap-2">
             <button
               onClick={applyFilters}
-              className="admin-btn-primary h-10 flex-1 !bg-[#FFC400] !text-[#0B1220] font-bold text-xs"
+              className="admin-btn-primary h-10 flex-1 !bg-[#1C9BD0] !text-[#0B1220] font-bold text-xs"
             >
               Apply
             </button>
@@ -544,7 +544,7 @@ const AdminEarnings = () => {
                 {/* Revenue Path */}
                 <path d={revenueLinePath} fill="none" stroke="#3B82F6" strokeWidth="2.5" />
                 {/* Commission Path */}
-                <path d={commissionLinePath} fill="none" stroke="#FFC400" strokeWidth="2.5" />
+                <path d={commissionLinePath} fill="none" stroke="#1C9BD0" strokeWidth="2.5" />
               </svg>
               <div className="flex justify-between text-[9px] text-slate-400 mt-2">
                 <span>Earliest Transaction</span>
@@ -554,7 +554,7 @@ const AdminEarnings = () => {
           )}
           <div className="flex gap-4 text-[10px] font-semibold border-t border-[#E5E7EB] pt-3">
             <span className="flex items-center gap-1.5 text-blue-600"><span className="w-2.5 h-1 bg-blue-600 inline-block rounded-full" /> Gross Fare</span>
-            <span className="flex items-center gap-1.5 text-amber-500"><span className="w-2.5 h-1 bg-[#FFC400] inline-block rounded-full" /> Commission</span>
+            <span className="flex items-center gap-1.5 text-amber-500"><span className="w-2.5 h-1 bg-[#1C9BD0] inline-block rounded-full" /> Commission</span>
           </div>
         </div>
 
@@ -567,7 +567,7 @@ const AdminEarnings = () => {
           <div className="flex items-center justify-center gap-6 py-2.5">
             <svg width="90" height="90" viewBox="0 0 100 100" className="transform -rotate-90">
               <circle cx="50" cy="50" r="35" fill="transparent" stroke="#3B82F6" strokeWidth="10" strokeDasharray={`${paymentMethodData[0].percent * 2.2} 220`} />
-              <circle cx="50" cy="50" r="35" fill="transparent" stroke="#FFC400" strokeWidth="10" strokeDasharray={`${paymentMethodData[1].percent * 2.2} 220`} strokeDashoffset={`-${paymentMethodData[0].percent * 2.2}`} />
+              <circle cx="50" cy="50" r="35" fill="transparent" stroke="#1C9BD0" strokeWidth="10" strokeDasharray={`${paymentMethodData[1].percent * 2.2} 220`} strokeDashoffset={`-${paymentMethodData[0].percent * 2.2}`} />
             </svg>
             <div className="space-y-1.5 text-[10px] font-bold">
               {paymentMethodData.map((d, i) => (
@@ -594,7 +594,7 @@ const AdminEarnings = () => {
             {data.results.slice(0, 10).map((r, i) => {
               const heightPercent = maxCommission > 0 ? Math.max(10, Math.min(100, (Number(r.adminCommission || 0) / maxCommission) * 100)) : 10;
               return (
-                <div key={i} className="w-5 bg-amber-100 hover:bg-[#FFC400] transition-colors rounded-sm group relative" style={{ height: `${heightPercent}%` }}>
+                <div key={i} className="w-5 bg-amber-100 hover:bg-[#1C9BD0] transition-colors rounded-sm group relative" style={{ height: `${heightPercent}%` }}>
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 bg-slate-900 !text-white rounded p-1.5 text-[8px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none mb-1 z-10 whitespace-nowrap">
                     ₹{r.adminCommission}
                   </div>
@@ -653,7 +653,7 @@ const AdminEarnings = () => {
         <div className="admin-card bg-white border border-[#E5E7EB] rounded-lg">
           <div className="flex items-center gap-2 mb-4">
             <h3 className="text-xs font-bold text-[#0B1220] uppercase tracking-wider">Refunds & Adjustments</h3>
-            <div className="h-1.5 w-1.5 rounded-full bg-[#FFC400]" />
+            <div className="h-1.5 w-1.5 rounded-full bg-[#1C9BD0]" />
           </div>
           <div className="grid grid-cols-2 gap-4 text-xs mb-4">
             <div>
@@ -781,7 +781,7 @@ const AdminEarnings = () => {
                             className="text-[11px] font-bold text-slate-500 hover:text-[#0B1220] flex items-center gap-0.5 justify-end w-full"
                           >
                             <span>Details</span>
-                            <ChevronRight size={12} className={`transition-transform duration-250 ${isExpanded ? 'rotate-90 text-[#FFC400]' : ''}`} />
+                            <ChevronRight size={12} className={`transition-transform duration-250 ${isExpanded ? 'rotate-90 text-[#1C9BD0]' : ''}`} />
                           </button>
                         </td>
                       </tr>
@@ -793,12 +793,12 @@ const AdminEarnings = () => {
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
-                              className="bg-white border-l-4 border-l-[#FFC400] border border-[#E5E7EB] rounded-r-xl p-3 shadow-sm space-y-3 font-sans text-xs text-[#0B1220] overflow-hidden"
+                              className="bg-white border-l-4 border-l-[#1C9BD0] border border-[#E5E7EB] rounded-r-xl p-3 shadow-sm space-y-3 font-sans text-xs text-[#0B1220] overflow-hidden"
                             >
                               <div className="flex items-center justify-between border-b border-[#F1F5F9] pb-2">
                                 <div>
                                   <h4 className="font-bold text-sm text-[#0B1220] flex items-center gap-1.5">
-                                    <IndianRupee size={15} className="text-[#FFC400]" />
+                                    <IndianRupee size={15} className="text-[#1C9BD0]" />
                                     <span>Transaction Details: {selectedTx.requestId}</span>
                                   </h4>
                                   <p className="text-[#64748B] text-[10px] mt-0.5">Completed: {formatDate(selectedTx.completedAt)}</p>
@@ -932,7 +932,7 @@ const BreakdownPanel = ({ title, icon: Icon, rows, emptyText }) => {
                   <span className="shrink-0 font-bold text-[#0B1220]">{currency(row.adminCommission)}</span>
                 </div>
                 <div className="h-1.5 rounded bg-slate-100 overflow-hidden">
-                  <div className="h-1.5 rounded bg-[#FFC400]" style={{ width: `${percent}%` }} />
+                  <div className="h-1.5 rounded bg-[#1C9BD0]" style={{ width: `${percent}%` }} />
                 </div>
                 <p className="mt-1 text-[9px] font-semibold text-slate-400">
                   {row.trips} trips · gross {currency(row.grossFare)}

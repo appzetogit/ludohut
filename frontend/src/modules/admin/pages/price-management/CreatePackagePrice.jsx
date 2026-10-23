@@ -542,11 +542,11 @@ const CreatePackagePrice = ({ mode = 'create' }) => {
               </div>
               <div className="space-y-3 text-xs text-gray-600">
                 <div>
-                  <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><MapPin size={12} className="text-[#00BFA5]"/> Destination</p>
+                  <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><MapPin size={12} className="text-[#1C9BD0]"/> Destination</p>
                   <p className="leading-snug text-gray-500 pl-4.5">Search and select the target city for this package pricing.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><Car size={12} className="text-[#00BFA5]"/> Vehicle-wise Pricing</p>
+                  <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><Car size={12} className="text-[#1C9BD0]"/> Vehicle-wise Pricing</p>
                   <p className="leading-snug text-gray-500 pl-4.5">Each vehicle added to this package gets its own base price, distance limits, and commission rules.</p>
                 </div>
                 <div className="bg-emerald-50 rounded p-2 border border-emerald-100">

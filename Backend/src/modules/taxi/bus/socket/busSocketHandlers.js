@@ -4,7 +4,7 @@ import { getDhabaRoom } from '../services/dhabaService.js';
 import { BUS_LIVE_EVENTS, getBusLiveRoom, getPassengerLiveTracking } from '../services/busTicketService.js';
 import { BusBooking } from '../../user/models/BusBooking.js';
 
-/// Socket wiring for ZI Bus:
+/// Socket wiring for Ludo Hut Bus:
 ///  - anyone looking at a seat map joins that run's room and gets every
 ///    seat change live (including seats sold on other platforms);
 ///  - a logged-in dhaba joins its own room for order alerts.

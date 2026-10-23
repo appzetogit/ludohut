@@ -37,7 +37,7 @@ const DhabaOrdersAdmin = () => {
     <div className="min-h-screen bg-[#F8F9FA] p-6 lg:p-8">
       <div className="mx-auto max-w-6xl space-y-6">
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-orange-500">ZI Bus · Food</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.28em] text-orange-500">Ludo Hut Bus · Food</p>
           <h1 className="mt-2 text-3xl font-black tracking-tight text-slate-900">Dhaba Food Orders</h1>
         </div>
 
@@ -61,7 +61,7 @@ const DhabaOrdersAdmin = () => {
               <p className="text-lg font-black text-slate-900">{money(totals.gross)}</p>
             </div>
             <div className="rounded-2xl border border-slate-100 bg-white px-5 py-3">
-              <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">ZI Bus commission</p>
+              <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Ludo Hut Bus commission</p>
               <p className="text-lg font-black text-emerald-600">{money(totals.commission)}</p>
             </div>
           </div>

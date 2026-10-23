@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom';
 import { DhabaEarnings, DhabaLayout, DhabaLogin, DhabaMenu, DhabaOrders, DhabaRegister } from './lazyPages';
 
-// Partner panel for highway dhabas (ZI Bus food pre-orders).
+// Partner panel for highway dhabas (Ludo Hut Bus food pre-orders).
 const dhabaRoutes = (
   <>
     <Route path="/dhaba/login" element={<DhabaLogin />} />

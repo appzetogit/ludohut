@@ -290,7 +290,7 @@ const SidebarItem = ({ icon, label, path, isCollapsed, sidebarTextColor, unreadC
     to={path}
     end
     className={({ isActive }) =>
-      `group relative flex items-center gap-3.5 px-4 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-[#05070D] bg-[#FFC400]' : 'hover:bg-amber-100/50 hover:text-slate-900'
+      `group relative flex items-center gap-3.5 px-4 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-[#05070D] bg-[#1C9BD0]' : 'hover:bg-amber-100/50 hover:text-slate-900'
       }`
     }
     style={({ isActive }) => ({
@@ -416,7 +416,7 @@ const SidebarGroup = ({
                     to={item.path}
                     end
                     className={({ isActive: childActive }) =>
-                      `group flex items-center gap-3 px-3 py-1.5 rounded-lg text-[12.5px] transition-all duration-200 ${childActive ? 'text-[#05070D] bg-[#FFC400]' : 'hover:text-slate-900 hover:bg-amber-100/50'
+                      `group flex items-center gap-3 px-3 py-1.5 rounded-lg text-[12.5px] transition-all duration-200 ${childActive ? 'text-[#05070D] bg-[#1C9BD0]' : 'hover:text-slate-900 hover:bg-amber-100/50'
                       }`
                     }
                     style={({ isActive: childActive }) => ({
@@ -519,7 +519,7 @@ const NestedGroup = ({
                   }
                   style={({ isActive: childActive }) => ({
                     color: childActive ? '#05070D' : sidebarTextColor,
-                    backgroundColor: childActive ? '#FFC400' : 'transparent',
+                    backgroundColor: childActive ? '#1C9BD0' : 'transparent',
                   })}
                 >
                   {({ isActive: childActive }) => (
@@ -1294,19 +1294,15 @@ const AdminLayout = () => {
 
       <div className="flex h-screen overflow-hidden bg-[#F8F9FA] font-sans text-gray-900">
       <aside
-        className={`relative z-50 flex h-screen flex-col overflow-hidden transition-all bg-[#fffbeb] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isCollapsed ? 'w-20' : 'w-72'
+        className={`relative z-50 flex h-screen flex-col overflow-hidden transition-all bg-[#F1F9FD] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isCollapsed ? 'w-20' : 'w-72'
           } ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
       >
         <div className="flex h-full flex-col">
-          <div className="group/sidebar-head relative mb-2 flex h-14 items-center border-b border-amber-200/50 px-5">
+          <div className="group/sidebar-head relative mb-2 flex h-14 items-center border-b border-yellow-200/50 px-5">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-amber-200 bg-amber-100 p-1.5 transition-all duration-300 group-hover/sidebar-head:scale-105 shadow-sm">
-                  {settings.general?.logo || settings.customization?.logo ? (
-                    <img src={settings.general?.logo || settings.customization?.logo} alt={appName} className="h-full w-full object-contain" />
-                  ) : (
-                    <Zap size={20} className="text-amber-600 fill-amber-600" />
-                  )}
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-yellow-200 bg-white p-1.5 transition-all duration-300 group-hover/sidebar-head:scale-105 shadow-sm">
+                  <img src={settings.general?.logo || settings.customization?.logo || '/ludohut-mark.png'} alt={appName} className="h-full w-full object-contain" />
                 </div>
                 <div className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 ring-2 ring-indigo-900" />
               </div>
@@ -1317,7 +1313,7 @@ const AdminLayout = () => {
                   className="flex flex-col"
                 >
                   <h3 className="text-sm font-bold leading-tight text-slate-900 tracking-tight">
-                    {mode === OWNER_MODE ? 'Owner Panel' : appName || 'APPZETO'}
+                    {mode === OWNER_MODE ? 'Owner Panel' : appName || 'LUDO HUT'}
                   </h3>
                   <div className="mt-0.5 flex items-center gap-1.5">
                     <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
@@ -1715,7 +1711,7 @@ const AdminLayout = () => {
                   >
                     <div className="px-3 py-2 border-b border-slate-100 mb-1 bg-slate-50/50 rounded-t-lg">
                       <p className="text-[10px] font-semibold text-slate-500 mb-0.5">Account</p>
-                      <p className="text-[12px] font-medium text-slate-900 truncate">{adminProfile?.email || 'root@Appzeto .cloud'}</p>
+                      <p className="text-[12px] font-medium text-slate-900 truncate">{adminProfile?.email || 'root@Ludo Hut .cloud'}</p>
                     </div>
 
                     <div className="p-1 space-y-0.5">

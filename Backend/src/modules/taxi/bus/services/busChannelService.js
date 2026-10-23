@@ -12,7 +12,7 @@ import { resolveScheduleRoute } from '../utils/busRoutes.js';
 
 // Multi-platform seat synchronisation.
 //
-// ZI Bus owns the seat map. Every other place that sells the same bus is a
+// Ludo Hut Bus owns the seat map. Every other place that sells the same bus is a
 // "channel" and talks to us in two directions:
 //
 //   inbound  - the channel calls our channel API (X-Api-Key) to read live

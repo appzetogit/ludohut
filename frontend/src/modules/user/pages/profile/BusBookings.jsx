@@ -106,7 +106,7 @@ const BusBookings = () => {
       <BusTopBar
         onBack={() => navigate(-1)}
         title="My trips"
-        subtitle="ZI Bus tickets"
+        subtitle="Ludo Hut Bus tickets"
         right={(
           <button type="button" onClick={() => navigate(`${routePrefix}/bus`)} className="zb-icon-btn" aria-label="Book a bus">
             <Plus size={18} />

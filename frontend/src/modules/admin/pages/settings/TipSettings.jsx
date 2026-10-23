@@ -79,7 +79,7 @@ const TipSettings = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F5F6F8]">
-        <Loader2 className="w-10 h-10 text-[#F4B400] animate-spin" />
+        <Loader2 className="w-10 h-10 text-[#0F81B6] animate-spin" />
       </div>
     );
   }
@@ -98,7 +98,7 @@ const TipSettings = () => {
            </div>
            
            <div className="flex items-center gap-4">
-              <div className="w-1.5 h-8 bg-[#F4B400] rounded-full"></div>
+              <div className="w-1.5 h-8 bg-[#0F81B6] rounded-full"></div>
               <div>
                  <h1 className="text-2xl font-bold text-[#151515]">Tip Settings</h1>
                  <p className="text-sm text-gray-500 mt-1">Configure how customers can reward drivers with optional tips after completing a ride.</p>
@@ -107,7 +107,7 @@ const TipSettings = () => {
         </div>
 
         {/* Enable Driver Tips Card */}
-        <div className={`bg-white rounded-2xl shadow-sm border-l-4 transition-all duration-300 ${isEnabled ? 'border-l-[#F4B400] border-t border-r border-b border-[#E5E7EB]' : 'border-[#E5E7EB]'}`}>
+        <div className={`bg-white rounded-2xl shadow-sm border-l-4 transition-all duration-300 ${isEnabled ? 'border-l-[#0F81B6] border-t border-r border-b border-[#E5E7EB]' : 'border-[#E5E7EB]'}`}>
            <div className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div>
                  <h3 className="text-lg font-bold text-[#151515] flex items-center gap-2">⭐ Driver Tips</h3>
@@ -121,8 +121,8 @@ const TipSettings = () => {
               <button
                 type="button"
                 onClick={() => setSettings(s => ({ ...s, enable_tips: isEnabled ? "0" : "1" }))}
-                className={`w-14 h-7 rounded-full relative transition-colors duration-300 shrink-0 focus:outline-none focus:ring-2 focus:ring-[#F4B400] focus:ring-offset-2 ${
-                  isEnabled ? 'bg-[#F4B400]' : 'bg-gray-300'
+                className={`w-14 h-7 rounded-full relative transition-colors duration-300 shrink-0 focus:outline-none focus:ring-2 focus:ring-[#0F81B6] focus:ring-offset-2 ${
+                  isEnabled ? 'bg-[#0F81B6]' : 'bg-gray-300'
                 }`}
               >
                 <div
@@ -141,7 +141,7 @@ const TipSettings = () => {
            <div className="lg:col-span-3 space-y-6">
               
               {/* Configuration Card */}
-              <div className="bg-white rounded-[20px] shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#F4B400] flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md relative">
+              <div className="bg-white rounded-[20px] shadow-sm border border-[#E5E7EB] border-l-4 border-l-[#0F81B6] flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md relative">
                  <div className="p-6">
                     <h3 className="text-lg font-bold text-[#151515]">Tip Configuration</h3>
                     <p className="text-sm text-gray-500 mt-1 mb-8">Configure minimum tip amount and available preset values.</p>
@@ -150,7 +150,7 @@ const TipSettings = () => {
                     <div className="space-y-2 mb-8">
                        <label className="text-sm font-semibold text-[#151515] block">Minimum Tip Amount</label>
                        <div className="flex items-stretch relative group">
-                          <div className="w-12 bg-[#F5F6F8] border border-[#E5E7EB] border-r-0 rounded-l-lg flex items-center justify-center text-gray-500 font-bold group-focus-within:border-[#F4B400] transition-colors">
+                          <div className="w-12 bg-[#F5F6F8] border border-[#E5E7EB] border-r-0 rounded-l-lg flex items-center justify-center text-gray-500 font-bold group-focus-within:border-[#0F81B6] transition-colors">
                              ₹
                           </div>
                           <input 
@@ -158,7 +158,7 @@ const TipSettings = () => {
                             value={settings.min_tip_amount || ''}
                             onChange={(e) => setSettings(s => ({ ...s, min_tip_amount: e.target.value }))}
                             placeholder="Example: 10"
-                            className="flex-1 bg-white border border-[#E5E7EB] rounded-r-lg py-3 px-4 text-sm text-[#151515] font-medium focus:border-[#F4B400] focus:ring-1 focus:ring-[#F4B400] transition-all outline-none"
+                            className="flex-1 bg-white border border-[#E5E7EB] rounded-r-lg py-3 px-4 text-sm text-[#151515] font-medium focus:border-[#0F81B6] focus:ring-1 focus:ring-[#0F81B6] transition-all outline-none"
                           />
                        </div>
                        {!settings.min_tip_amount ? (
@@ -194,7 +194,7 @@ const TipSettings = () => {
                             value={newPreset}
                             onChange={(e) => setNewPreset(e.target.value)}
                             placeholder="Amount" 
-                            className="w-24 bg-white border border-[#E5E7EB] rounded-lg py-2 px-3 text-sm focus:border-[#F4B400] outline-none" 
+                            className="w-24 bg-white border border-[#E5E7EB] rounded-lg py-2 px-3 text-sm focus:border-[#0F81B6] outline-none" 
                           />
                           <button onClick={handleAddPreset} className="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 transition-colors flex items-center gap-1">
                              <Plus size={14} /> Add
@@ -212,7 +212,7 @@ const TipSettings = () => {
                          type="button"
                          onClick={() => setAllowCustom(!allowCustom)}
                          className={`w-12 h-6 rounded-full relative transition-colors duration-300 shrink-0 ${
-                           allowCustom ? 'bg-[#F4B400]' : 'bg-gray-300'
+                           allowCustom ? 'bg-[#0F81B6]' : 'bg-gray-300'
                          }`}
                        >
                          <div className={`w-4 h-4 bg-white rounded-full absolute top-1 shadow-sm transition-all duration-300 ${allowCustom ? 'left-7' : 'left-1'}`} />
@@ -226,7 +226,7 @@ const TipSettings = () => {
                     <button 
                       onClick={handleUpdate}
                       disabled={saving}
-                      className="bg-[#F4B400] text-[#151515] px-8 py-3 rounded-xl text-sm font-bold shadow-md flex items-center gap-2 hover:bg-[#E0A800] hover:shadow-lg active:scale-95 transition-all disabled:opacity-50"
+                      className="bg-[#0F81B6] text-[#151515] px-8 py-3 rounded-xl text-sm font-bold shadow-md flex items-center gap-2 hover:bg-[#E0A800] hover:shadow-lg active:scale-95 transition-all disabled:opacity-50"
                     >
                       {saving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
                       {saving ? 'Saving...' : 'Save Settings'}
@@ -239,19 +239,19 @@ const TipSettings = () => {
                  <h4 className="text-sm font-bold text-[#151515] mb-3">How Driver Tips Work</h4>
                  <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-start gap-2">
-                       <span className="text-[#F4B400] mt-1">•</span> Tips are strictly optional for the customer.
+                       <span className="text-[#0F81B6] mt-1">•</span> Tips are strictly optional for the customer.
                     </li>
                     <li className="flex items-start gap-2">
-                       <span className="text-[#F4B400] mt-1">•</span> Tips are transferred directly to driver earnings.
+                       <span className="text-[#0F81B6] mt-1">•</span> Tips are transferred directly to driver earnings.
                     </li>
                     <li className="flex items-start gap-2">
-                       <span className="text-[#F4B400] mt-1">•</span> Customers can skip tipping entirely.
+                       <span className="text-[#0F81B6] mt-1">•</span> Customers can skip tipping entirely.
                     </li>
                     <li className="flex items-start gap-2">
-                       <span className="text-[#F4B400] mt-1">•</span> Minimum amount is controlled via this panel.
+                       <span className="text-[#0F81B6] mt-1">•</span> Minimum amount is controlled via this panel.
                     </li>
                     <li className="flex items-start gap-2">
-                       <span className="text-[#F4B400] mt-1">•</span> Driver tips do not affect base fare calculation.
+                       <span className="text-[#0F81B6] mt-1">•</span> Driver tips do not affect base fare calculation.
                     </li>
                  </ul>
               </div>
@@ -285,7 +285,7 @@ const TipSettings = () => {
                                 </div>
                                 <div>
                                    <h4 className="text-sm font-bold text-[#151515]">Driver Name</h4>
-                                   <div className="flex items-center gap-1 text-[#F4B400] mt-1">
+                                   <div className="flex items-center gap-1 text-[#0F81B6] mt-1">
                                       <Star size={12} fill="currentColor" />
                                       <Star size={12} fill="currentColor" />
                                       <Star size={12} fill="currentColor" />
@@ -321,7 +321,7 @@ const TipSettings = () => {
                                   {/* Tip Chips */}
                                   <div className="flex justify-center gap-3">
                                       {presets.slice(0, 4).map((val, i) => (
-                                         <div key={val} className={`w-[70px] py-3 rounded-xl text-center text-sm font-bold shadow-sm transition-colors cursor-pointer border ${i === 1 ? 'bg-[#F4B400] border-[#F4B400] text-[#151515]' : 'bg-white border-gray-200 text-gray-600 hover:border-[#F4B400]'}`}>
+                                         <div key={val} className={`w-[70px] py-3 rounded-xl text-center text-sm font-bold shadow-sm transition-colors cursor-pointer border ${i === 1 ? 'bg-[#0F81B6] border-[#0F81B6] text-[#151515]' : 'bg-white border-gray-200 text-gray-600 hover:border-[#0F81B6]'}`}>
                                             ₹{val}
                                          </div>
                                       ))}
@@ -329,13 +329,13 @@ const TipSettings = () => {
                                   
                                   {allowCustom && (
                                      <div className="text-center">
-                                        <span className="text-sm font-bold text-gray-400 hover:text-[#F4B400] cursor-pointer underline underline-offset-4 decoration-2 decoration-gray-200">Enter custom amount</span>
+                                        <span className="text-sm font-bold text-gray-400 hover:text-[#0F81B6] cursor-pointer underline underline-offset-4 decoration-2 decoration-gray-200">Enter custom amount</span>
                                      </div>
                                   )}
 
                                   <div className="flex gap-4 pt-2">
                                      <button className="flex-1 border-2 border-gray-200 text-gray-600 font-bold py-4 rounded-2xl text-sm hover:bg-gray-50 transition-colors">Cancel</button>
-                                     <button className="flex-1 bg-[#F4B400] text-[#151515] font-bold py-4 rounded-2xl text-sm shadow-lg shadow-yellow-500/20 hover:bg-[#e0a800] transition-colors">Add Tip</button>
+                                     <button className="flex-1 bg-[#0F81B6] text-[#151515] font-bold py-4 rounded-2xl text-sm shadow-lg shadow-yellow-500/20 hover:bg-[#e0a800] transition-colors">Add Tip</button>
                                   </div>
                                </div>
                            </div>

@@ -290,7 +290,7 @@ const Airport = ({ mode: initialMode = "list" }) => {
                 <button 
                   type="button"
                   onClick={() => navigate("create")}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#FFC400] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#1C9BD0] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm"
                 >
                   <Plus size={16} /> Add Airport
                 </button>
@@ -452,7 +452,7 @@ const Airport = ({ mode: initialMode = "list" }) => {
                           </td>
                           <td className="px-6 py-4 text-right">
                             <div className="flex justify-end gap-2 text-gray-400 relative z-50">
-                              <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); navigate(`edit/${airport._id || airport.id}`); }} className="p-1.5 hover:text-[#0B1220] hover:bg-[#FFC400] rounded-lg transition-colors"><Edit2 size={14} /></button>
+                              <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); navigate(`edit/${airport._id || airport.id}`); }} className="p-1.5 hover:text-[#0B1220] hover:bg-[#1C9BD0] rounded-lg transition-colors"><Edit2 size={14} /></button>
                               <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleDelete(airport._id || airport.id); }} className="p-1.5 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"><Trash2 size={14} /></button>
                             </div>
                           </td>
@@ -467,7 +467,7 @@ const Airport = ({ mode: initialMode = "list" }) => {
                           <button 
                             type="button"
                             onClick={() => navigate("create")}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFC400] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#1C9BD0] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm"
                           >
                             <Plus size={16} /> Add Airport
                           </button>
@@ -614,7 +614,7 @@ const Airport = ({ mode: initialMode = "list" }) => {
                    <button 
                      type="button"
                      onClick={handleSave} disabled={saving}
-                     className="w-full py-3 bg-[#FFC400] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm disabled:opacity-50 flex items-center justify-center gap-2"
+                     className="w-full py-3 bg-[#1C9BD0] text-[#0B1220] rounded-lg text-sm font-medium hover:brightness-95 transition-colors shadow-sm disabled:opacity-50 flex items-center justify-center gap-2"
                    >
                      {saving ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
                      {id ? 'Update Airport' : 'Save Airport'}

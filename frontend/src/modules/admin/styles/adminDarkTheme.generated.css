@@ -714,7 +714,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .bg-yellow-50\/80,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-yellow-50\/80:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-yellow-50\/90,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-yellow-50\/90:hover {
-  background-color: rgba(234,179,8, 0.12) !important;
+  background-color: rgba(28,155,208, 0.12) !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .bg-yellow-100,
@@ -757,7 +757,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .bg-yellow-200\/80,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-yellow-200\/80:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-yellow-200\/90,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-yellow-200\/90:hover {
-  background-color: rgba(234,179,8, 0.2) !important;
+  background-color: rgba(28,155,208, 0.2) !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .text-yellow-500,
@@ -781,7 +781,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .group:hover .group-hover\:text
 html[data-admin-theme='dark'] .redigo-admin-root .text-yellow-950,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:text-yellow-950:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .group:hover .group-hover\:text-yellow-950 {
-  color: #facc15 !important;
+  color: #7ACFE9 !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .border-yellow-50,
@@ -864,7 +864,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .border-yellow-300\/80,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:border-yellow-300\/80:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .border-yellow-300\/90,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:border-yellow-300\/90:hover {
-  border-color: rgba(234,179,8, 0.32) !important;
+  border-color: rgba(28,155,208, 0.32) !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .bg-lime-50,
@@ -2098,7 +2098,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .bg-indigo-50\/80,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-indigo-50\/80:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-indigo-50\/90,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-indigo-50\/90:hover {
-  background-color: rgba(99,102,241, 0.12) !important;
+  background-color: rgba(15,129,182, 0.12) !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .bg-indigo-100,
@@ -2141,7 +2141,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .bg-indigo-200\/80,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-indigo-200\/80:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-indigo-200\/90,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-indigo-200\/90:hover {
-  background-color: rgba(99,102,241, 0.2) !important;
+  background-color: rgba(15,129,182, 0.2) !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .text-indigo-500,
@@ -2165,7 +2165,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .group:hover .group-hover\:text
 html[data-admin-theme='dark'] .redigo-admin-root .text-indigo-950,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:text-indigo-950:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .group:hover .group-hover\:text-indigo-950 {
-  color: #a5b4fc !important;
+  color: #7ACFE9 !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .border-indigo-50,
@@ -2248,7 +2248,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .border-indigo-300\/80,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:border-indigo-300\/80:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .border-indigo-300\/90,
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:border-indigo-300\/90:hover {
-  border-color: rgba(99,102,241, 0.32) !important;
+  border-color: rgba(15,129,182, 0.32) !important;
 }
 
 html[data-admin-theme='dark'] .redigo-admin-root .bg-violet-50,
@@ -3106,6 +3106,8 @@ html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#F0F2F5\],
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#F0F2F5\]:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#F0FDFA\],
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#F0FDFA\]:hover,
+html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#F1F9FD\],
+html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#F1F9FD\]:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#F3F4F9\],
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#F3F4F9\]:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#F5F6F8\],
@@ -3141,9 +3143,7 @@ html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#FFFDF5\]:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#f0f4f8\],
 html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#f0f4f8\]:hover,
 html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#f6f7fb\],
-html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#f6f7fb\]:hover,
-html[data-admin-theme='dark'] .redigo-admin-root .bg-\[\#fffbeb\],
-html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#fffbeb\]:hover {
+html[data-admin-theme='dark'] .redigo-admin-root .hover\:bg-\[\#f6f7fb\]:hover {
   background-color: var(--d-raised) !important;
 }
 

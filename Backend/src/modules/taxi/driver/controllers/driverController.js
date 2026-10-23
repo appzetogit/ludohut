@@ -6341,7 +6341,7 @@ export const createDriverPaymentQr = async (req, res) => {
   }
 
   // "Online" at ride end is paid to the driver's OWN verified UPI - their
-  // uploaded scanner, or a QR made from their UPI ID - never a ZI CAB
+  // uploaded scanner, or a QR made from their UPI ID - never a Ludo Hut
   // collection QR (riders were being shown the company's scanner). The ride
   // is then closed as collected via UPI, which settles like cash.
   const driver = await Driver.findById(req.auth.sub)
@@ -7375,7 +7375,7 @@ export const updateDriverVehicle = async (req, res) => {
   } = req.body;
 
   // A driver can be enrolled in more than one vehicle category post-signup
-  // too (e.g. adding ZI Cab Non-AC to an existing ZI Cab AC enrollment) —
+  // too (e.g. adding Ludo Hut Non-AC to an existing Ludo Hut AC enrollment) —
   // mirrors the onboarding vehicle step, which already accepts this shape.
   // The legacy singular `vehicleTypeId` is folded in too, de-duplicated, so
   // older app builds that only ever send that keep working.

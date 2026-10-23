@@ -36,7 +36,7 @@ const PROMO_TRANSPORT_OPTIONS = [
 ];
 
 const inputClass =
-  'w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-800 bg-white focus:border-[#FFC400] focus:ring-1 focus:ring-[#FFC400] outline-none transition-colors disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed';
+  'w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-800 bg-white focus:border-[#1C9BD0] focus:ring-1 focus:ring-[#1C9BD0] outline-none transition-colors disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed';
 const labelClass = 'block text-xs font-medium text-gray-500 mb-1.5';
 
 const createInitialFormData = () => ({
@@ -127,7 +127,7 @@ const LocationMultiSelect = ({ locations, selectedIds, onChange }) => {
   return (
     <div className="relative" ref={wrapperRef}>
       <div 
-        className="min-h-[42px] w-full border border-gray-200 rounded-lg px-3 py-2 bg-white flex flex-wrap gap-2 cursor-pointer focus-within:border-[#FFC400] focus-within:ring-1 focus-within:ring-[#FFC400] transition-colors"
+        className="min-h-[42px] w-full border border-gray-200 rounded-lg px-3 py-2 bg-white flex flex-wrap gap-2 cursor-pointer focus-within:border-[#1C9BD0] focus-within:ring-1 focus-within:ring-[#1C9BD0] transition-colors"
         onClick={() => setIsOpen(true)}
       >
         {selectedIds.length === 0 && (
@@ -136,7 +136,7 @@ const LocationMultiSelect = ({ locations, selectedIds, onChange }) => {
         {selectedIds.map(id => {
           const loc = locations.find(l => String(l._id) === String(id));
           return loc ? (
-            <span key={id} className="inline-flex items-center gap-1.5 bg-[#FFC400]/10 text-[#0B1220] px-2.5 py-1 rounded-md text-xs font-medium border border-[#FFC400]/20 transition-colors hover:bg-[#FFC400]/20">
+            <span key={id} className="inline-flex items-center gap-1.5 bg-[#1C9BD0]/10 text-[#0B1220] px-2.5 py-1 rounded-md text-xs font-medium border border-[#1C9BD0]/20 transition-colors hover:bg-[#1C9BD0]/20">
               {loc.service_location_name || loc.name}
               <button type="button" onClick={(e) => removeLocation(e, id)} className="text-[#0B1220]/50 hover:text-[#0B1220] focus:outline-none">
                 <X size={12} strokeWidth={3} />
@@ -166,7 +166,7 @@ const LocationMultiSelect = ({ locations, selectedIds, onChange }) => {
                   onClick={() => toggleSelection(String(loc._id))}
                   className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 cursor-pointer border-b border-gray-50 last:border-0"
                 >
-                  <input type="checkbox" checked={isSelected} readOnly className="w-4 h-4 text-[#0B1220] rounded border-gray-300 focus:ring-[#FFC400] cursor-pointer" />
+                  <input type="checkbox" checked={isSelected} readOnly className="w-4 h-4 text-[#0B1220] rounded border-gray-300 focus:ring-[#1C9BD0] cursor-pointer" />
                   <span className="text-sm text-gray-700">{loc.service_location_name || loc.name}</span>
                 </div>
               );
@@ -206,7 +206,7 @@ const HeaderBlock = ({ isCreateRoute, isEditRoute, onBack }) => {
 const SectionCard = ({ icon: Icon, title, description, children }) => (
   <div className="bg-white rounded-xl border border-gray-200 p-4">
     <div className="flex items-center gap-3 mb-4 pb-3 border-b border-gray-100">
-      <div className="w-9 h-9 rounded-lg bg-[#FFC400]/10 flex items-center justify-center text-[#0B1220]">
+      <div className="w-9 h-9 rounded-lg bg-[#1C9BD0]/10 flex items-center justify-center text-[#0B1220]">
         <Icon size={18} />
       </div>
       <div>
@@ -247,7 +247,7 @@ const getStatusInfo = (promo) => {
   const from = new Date(promo.from);
   const to = new Date(promo.to);
 
-  if (now < from) return { label: 'Scheduled', color: 'bg-[#FFC400]/10 text-[#0B1220] border border-[#FFC400]/30' };
+  if (now < from) return { label: 'Scheduled', color: 'bg-[#1C9BD0]/10 text-[#0B1220] border border-[#1C9BD0]/30' };
   if (now > to) return { label: 'Expired', color: 'bg-rose-50 text-rose-700 border border-rose-200' };
   return { label: 'Active', color: 'bg-emerald-50 text-emerald-700 border border-emerald-200' };
 };
@@ -520,7 +520,7 @@ const PromoCodes = () => {
                   <button
                     type="button"
                     onClick={() => navigate(CREATE_PATH)}
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-[#FFC400] border border-[#FFC400] rounded-lg hover:bg-[#E5B000] transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-[#1C9BD0] border border-[#1C9BD0] rounded-lg hover:bg-[#E5B000] transition-colors"
                   >
                     <Plus size={16} /> Add Promo Code
                   </button>
@@ -607,7 +607,7 @@ const PromoCodes = () => {
                       <tr>
                         <td colSpan="6" className="px-6 py-16 text-center text-sm font-medium text-gray-500">
                           <div className="flex items-center justify-center gap-3">
-                            <Loader2 className="animate-spin text-[#FFC400]" size={24} />
+                            <Loader2 className="animate-spin text-[#1C9BD0]" size={24} />
                             Loading Promo Codes...
                           </div>
                         </td>
@@ -671,7 +671,7 @@ const PromoCodes = () => {
                               <button
                                 type="button"
                                 onClick={() => navigate(`/admin/promotions/promo-codes/edit/${promo._id}`)}
-                                className="p-1.5 text-[#0B1220] bg-[#FFC400]/10 rounded hover:bg-[#FFC400]/20 transition-colors"
+                                className="p-1.5 text-[#0B1220] bg-[#1C9BD0]/10 rounded hover:bg-[#1C9BD0]/20 transition-colors"
                                 title="Edit"
                               >
                                 <Pencil size={16} />
@@ -763,7 +763,7 @@ const PromoCodes = () => {
                         type="checkbox"
                         checked={formData.user_specific}
                         onChange={(e) => handleUserSpecificChange(e.target.checked)}
-                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#0B1220] focus:ring-[#FFC400] cursor-pointer"
+                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#0B1220] focus:ring-[#1C9BD0] cursor-pointer"
                       />
                       <div>
                         <p className="text-sm font-medium text-gray-800">Apply for selected user only</p>
@@ -898,7 +898,7 @@ const PromoCodes = () => {
                         type="checkbox"
                         checked={formData.active}
                         onChange={(e) => handleFieldChange('active', e.target.checked)}
-                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#0B1220] focus:ring-[#FFC400] cursor-pointer"
+                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#0B1220] focus:ring-[#1C9BD0] cursor-pointer"
                       />
                       <div>
                         <p className="text-sm font-medium text-gray-800">Promo is active</p>
@@ -915,7 +915,7 @@ const PromoCodes = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-3 bg-[#FFC400] text-white rounded-lg text-sm font-medium hover:bg-[#E5B000] transition-colors disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-[#1C9BD0] text-white rounded-lg text-sm font-medium hover:bg-[#E5B000] transition-colors disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
                 >
                   {submitting ? <Loader2 className="animate-spin" size={16} /> : <Save size={16} />}
                   {isEditRoute ? 'Update Promo Code' : 'Save Promo Code'}

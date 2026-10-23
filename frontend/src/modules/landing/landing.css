@@ -1,6 +1,6 @@
-/* ZI CAB landing styles.
+/* Ludo Hut landing styles.
 
-   Everything below is nested under `.zicab-landing` so it cannot reach the taxi
+   Everything below is nested under `.ludohut-landing` so it cannot reach the taxi
    app: both sides use generic class names (`container`, `btn`, `section-title`)
    and the taxi side is Tailwind 4, which an unscoped `*` or `h1` rule would
    restyle wholesale.
@@ -15,11 +15,16 @@
   /* one step deeper than navy-dark, for the recessed bands */
   --navy-deep: #050F20;
 
-  --primary-teal: #00BBA9;
-  --teal-hover: #00a394;
-  --teal-light: rgba(0, 187, 169, 0.12);
-  --teal-bright: #46E3D2;
-  --teal-ink: #04645C;
+  /* Ludo Hut blue. The variables kept their old teal names so every component
+     that reads them picks up the logo colours without a rename. */
+  --primary-teal: #1C9BD0;
+  --brand-gradient: linear-gradient(180deg, #7ACFE9 0%, #3FB4DE 45%, #0F81B6 100%);
+  --brand-gradient-x: linear-gradient(90deg, #7ACFE9 0%, #1C9BD0 55%, #0F81B6 100%);
+  --font-brand: 'Orbitron', 'Sora', sans-serif;
+  --teal-hover: #0F81B6;
+  --teal-light: rgba(28, 155, 208, 0.12);
+  --teal-bright: #7ACFE9;
+  --teal-ink: #0B6A99;
 
   /* Warm off-white instead of #FFF for large fields — pure white next to a
      saturated teal reads cheap and glares on an OLED phone. */
@@ -44,7 +49,7 @@
   --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.04), 0 4px 12px rgba(11, 18, 32, 0.045);
   --shadow-md: 0 2px 4px rgba(11, 18, 32, 0.045), 0 12px 28px rgba(11, 18, 32, 0.07);
   --shadow-lg: 0 4px 8px rgba(11, 18, 32, 0.05), 0 24px 54px rgba(11, 18, 32, 0.1);
-  --shadow-teal: 0 6px 14px rgba(0, 187, 169, 0.28), 0 18px 40px rgba(0, 187, 169, 0.18);
+  --shadow-teal: 0 6px 14px rgba(28, 155, 208, 0.28), 0 18px 40px rgba(28, 155, 208, 0.18);
   --hairline: inset 0 1px 0 rgba(255, 255, 255, 0.85);
   --hairline-dark: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
@@ -65,13 +70,13 @@
 /* The taxi app enforces its font with `* { font-family: ... !important }`, so the
    landing has to answer in kind. Higher specificity wins between two important
    declarations, which is why the heading rules below still take precedence. All
-   of it stays inside .zicab-landing. */
-.zicab-landing,
-.zicab-landing * {
+   of it stays inside .ludohut-landing. */
+.ludohut-landing,
+.ludohut-landing * {
   font-family: var(--font-main) !important;
 }
 
-.zicab-landing {
+.ludohut-landing {
   box-sizing: border-box;
   background-color: var(--bg-light);
   color: var(--text-body);
@@ -80,14 +85,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.zicab-landing *,
-.zicab-landing *::before,
-.zicab-landing *::after {
+.ludohut-landing *,
+.ludohut-landing *::before,
+.ludohut-landing *::after {
   box-sizing: border-box;
 }
 
-.zicab-landing {
-  /* ZI CAB Custom CSS Design System */
+.ludohut-landing {
+  /* Ludo Hut Custom CSS Design System */
 
 
   /* Display type: tighter tracking and optical sizing at large sizes. Default
@@ -146,7 +151,7 @@
     background: #0B1F3A;
   }
   ::-webkit-scrollbar-thumb {
-    background: #00BBA9;
+    background: #1C9BD0;
     border-radius: 4px;
   }
 
@@ -269,7 +274,7 @@
     overflow: hidden;
     background-color: var(--navy-deep);
     background-image:
-      radial-gradient(110% 130% at 12% -10%, rgba(0, 187, 169, 0.22) 0%, transparent 52%),
+      radial-gradient(110% 130% at 12% -10%, rgba(28, 155, 208, 0.22) 0%, transparent 52%),
       radial-gradient(90% 120% at 88% 0%, rgba(43, 92, 168, 0.28) 0%, transparent 55%),
       linear-gradient(160deg, #08182F 0%, #0B1F3A 55%, #071328 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -288,7 +293,7 @@
 
   .page-hero .page-tag {
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(0, 187, 169, 0.3);
+    border: 1px solid rgba(28, 155, 208, 0.3);
   }
 
   .page-tag {
@@ -410,7 +415,7 @@
   }
 
   .btn-teal {
-    background-image: linear-gradient(180deg, #14CDBA 0%, var(--primary-teal) 48%, #009C8D 100%);
+    background-image: linear-gradient(180deg, #4FC0E6 0%, var(--primary-teal) 48%, #0F81B6 100%);
     color: var(--text-white);
     box-shadow: var(--shadow-teal), inset 0 1px 0 rgba(255, 255, 255, 0.34),
       inset 0 -1px 0 rgba(0, 0, 0, 0.12);
@@ -418,7 +423,7 @@
 
   .btn-teal:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 187, 169, 0.34), 0 26px 52px rgba(0, 187, 169, 0.22),
+    box-shadow: 0 10px 20px rgba(28, 155, 208, 0.34), 0 26px 52px rgba(28, 155, 208, 0.22),
       inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 
@@ -432,7 +437,7 @@
 
   .btn-outline-light:hover {
     background: rgba(255, 255, 255, 0.13);
-    border-color: rgba(0, 187, 169, 0.65);
+    border-color: rgba(28, 155, 208, 0.65);
     color: #FFFFFF;
     transform: translateY(-2px);
   }
@@ -491,7 +496,7 @@
   .input-group input:focus,
   .input-group select:focus {
     border-color: var(--primary-teal);
-    box-shadow: 0 0 0 2px rgba(0, 187, 169, 0.2);
+    box-shadow: 0 0 0 2px rgba(28, 155, 208, 0.2);
   }
 
   .input-group select option {
@@ -712,7 +717,7 @@
       width: 100%;
       z-index: 1100;
       transform-origin: 0 50%;
-      background: linear-gradient(90deg, var(--primary-teal), #6ee7db);
+      background: linear-gradient(90deg, var(--primary-teal), #7ACFE9);
       animation: zc-scrollProgress linear;
       animation-timeline: scroll(root block);
     }
@@ -802,7 +807,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    background: rgba(0, 187, 169, 0.15);
+    background: rgba(28, 155, 208, 0.15);
     color: var(--primary-teal);
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -900,4 +905,140 @@ transform: scale(1) translateY(0);
 @keyframes zc-fadeIn {
 from { opacity: 0; transform: translateY(12px); }
 to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------------------------
+   Ludo Hut brand layer: the logo's squared wordmark, its sky-blue gradient and
+   the house mark. Written as full selectors (not nested) and with the extra
+   class so it outranks the per-component <style> blocks it refines.
+   --------------------------------------------------------------------------- */
+
+/* Wordmark: LUDO in white, HUT in the logo blue, both in the squared face. The
+   font rule needs !important to beat the landing's `* { font-family }`. */
+.ludohut-landing .brand-logo .logo-zi,
+.ludohut-landing .brand-logo .logo-cab,
+.ludohut-landing .footer-logo .logo-zi,
+.ludohut-landing .footer-logo .logo-cab,
+.ludohut-landing .preloader .pl-zi,
+.ludohut-landing .preloader .pl-cab {
+  font-family: var(--font-brand) !important;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.ludohut-landing .brand-logo .logo-zi { font-size: 24px; }
+.ludohut-landing .brand-logo .logo-cab { font-size: 24px; margin-left: 8px; }
+.ludohut-landing .footer-logo .logo-zi { font-size: 24px; }
+.ludohut-landing .footer-logo .logo-cab { font-size: 24px; margin-left: 8px; }
+.ludohut-landing .preloader .pl-cab { margin-left: 10px; }
+
+.ludohut-landing .brand-logo .logo-cab,
+.ludohut-landing .footer-logo .logo-cab,
+.ludohut-landing .preloader .pl-cab {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ludohut-landing .brand-logo .logo-tagline,
+.ludohut-landing .footer-tagline {
+  font-family: var(--font-brand) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 9px;
+  font-weight: 600;
+  color: #7ACFE9;
+  margin-top: 5px;
+}
+
+/* The mark is a transparent house shape, not a square app icon: no rounding,
+   no cover-crop. */
+.ludohut-landing .brand-logo .brand-logo-img,
+.ludohut-landing .footer-logo .footer-logo-img,
+.ludohut-landing .preloader .pl-logo {
+  border-radius: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(28, 155, 208, 0.35));
+}
+
+/* Primary buttons take the logo's vertical gradient. */
+.ludohut-landing .btn-teal {
+  background-image: linear-gradient(180deg, #5CC6EA 0%, #1C9BD0 50%, #0F81B6 100%);
+}
+
+/* Hero: the highlighted line uses the logo gradient, a tagline pill sits above
+   the headline, and the house mark is a large outline watermark behind the
+   booking card. */
+.ludohut-landing .hero-section {
+  background-image:
+    linear-gradient(105deg, rgba(5, 15, 32, 0.96) 0%, rgba(7, 21, 43, 0.86) 46%, rgba(9, 52, 84, 0.55) 100%),
+    url('/carbackground.png');
+}
+
+/* Solid, not the logo gradient: the headline is split into a span per letter
+   for the rise-in animation, and Chrome paints background-clip:text on those
+   transformed letters with smudged edges. */
+.ludohut-landing .hero-section .teal-text {
+  color: #3FB4DE;
+}
+
+.ludohut-landing .hero-brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 7px 16px 7px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(28, 155, 208, 0.12);
+  border: 1px solid rgba(122, 207, 233, 0.35);
+  box-shadow: var(--hairline-dark);
+}
+
+.ludohut-landing .hero-brand-eyebrow img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.ludohut-landing .hero-brand-eyebrow span {
+  font-family: var(--font-brand) !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #BFE7F5;
+}
+
+.ludohut-landing .hero-mark-watermark {
+  position: absolute;
+  right: -4%;
+  bottom: -12%;
+  width: min(560px, 62vw);
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 1;
+  filter: saturate(1.2);
+}
+
+.ludohut-landing .booking-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.ludohut-landing .booking-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--brand-gradient-x);
+}
+
+@media (max-width: 768px) {
+  .ludohut-landing .brand-logo .logo-zi,
+  .ludohut-landing .brand-logo .logo-cab { font-size: 19px; }
+  .ludohut-landing .brand-logo .logo-tagline { font-size: 7.5px; letter-spacing: 0.14em; }
+  .ludohut-landing .hero-brand-eyebrow span { font-size: 9.5px; letter-spacing: 0.16em; }
+  .ludohut-landing .hero-mark-watermark { width: 80vw; right: -20%; bottom: -6%; opacity: 0.07; }
 }

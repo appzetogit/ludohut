@@ -178,7 +178,7 @@ const MainDashboard = () => {
     return [
       { label: 'Completed', value: completed, color: '#22C55E', percent: Math.round((completed / total) * 100) },
       { label: 'Cancelled', value: cancelled, color: '#EF4444', percent: Math.round((cancelled / total) * 100) },
-      { label: 'Pending', value: pending, color: '#FFC400', percent: Math.round((pending / total) * 100) }
+      { label: 'Pending', value: pending, color: '#1C9BD0', percent: Math.round((pending / total) * 100) }
     ];
   }, [todayTrips]);
 
@@ -278,14 +278,14 @@ const MainDashboard = () => {
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <h3 className="text-xs text-[#0B1220] uppercase tracking-wider font-bold">Revenue Analytics</h3>
-                  <div className="h-1.5 w-1.5 rounded-full bg-[#FFC400]" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#1C9BD0]" />
                 </div>
                 <div className="flex gap-1">
                   {['Today', 'Week', 'Month', 'Year'].map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setTimeframe(tab)}
-                      className={`text-[9px] font-bold px-2 py-0.5 rounded border transition-all ${timeframe === tab ? 'bg-[#FFC400] text-[#0B1220] border-[#FFC400]' : 'bg-transparent text-[#64748B] border-[#E5E7EB]'}`}
+                      className={`text-[9px] font-bold px-2 py-0.5 rounded border transition-all ${timeframe === tab ? 'bg-[#1C9BD0] text-[#0B1220] border-[#1C9BD0]' : 'bg-transparent text-[#64748B] border-[#E5E7EB]'}`}
                     >
                       {tab}
                     </button>
@@ -303,7 +303,7 @@ const MainDashboard = () => {
                 </span>
               </div>
               <div className="bg-slate-50 border border-slate-100 rounded-lg p-2 text-center">
-                <span className="text-[8px] text-[#64748B] block uppercase font-bold text-[#FFC400]">Commission</span>
+                <span className="text-[8px] text-[#64748B] block uppercase font-bold text-[#1C9BD0]">Commission</span>
                 <span className="text-xs font-bold text-[#0B1220] block mt-0.5">
                   ₹{currency(timeframe === 'Today' ? todayEarnings.admin_commission : overallEarnings.admin_commission)}
                 </span>
@@ -327,15 +327,15 @@ const MainDashboard = () => {
                 <div className="relative pt-2">
                   <svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} className="w-full overflow-visible">
                     <path d={areaPath} fill="rgba(255, 196, 0, 0.05)" />
-                    <path d={linePath} fill="none" stroke="#FFC400" strokeWidth="2.5" />
+                    <path d={linePath} fill="none" stroke="#1C9BD0" strokeWidth="2.5" />
                     {revenuePoints.map((pt, idx) => (
                       <circle
                         key={idx}
                         cx={pt.x}
                         cy={pt.y}
                         r={hoveredRevenueIndex === idx ? 6 : 4}
-                        fill={hoveredRevenueIndex === idx ? '#FFC400' : '#FFFFFF'}
-                        stroke="#FFC400"
+                        fill={hoveredRevenueIndex === idx ? '#1C9BD0' : '#FFFFFF'}
+                        stroke="#1C9BD0"
                         strokeWidth="2"
                         className="cursor-pointer"
                         onMouseEnter={() => setHoveredRevenueIndex(idx)}
@@ -461,7 +461,7 @@ const MainDashboard = () => {
           <div className="admin-card flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
               <h3 className="text-xs text-[#0B1220] uppercase tracking-wider mb-3 flex items-center gap-1 font-bold">
-                <Award size={14} className="text-[#FFC400]" />
+                <Award size={14} className="text-[#1C9BD0]" />
                 <span>Performance Leaderboard</span>
               </h3>
               
@@ -543,7 +543,7 @@ const MainDashboard = () => {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xs !text-white uppercase tracking-wider flex items-center gap-1.5 font-bold">
-                  <Sparkles size={14} className="text-[#FFC400]" />
+                  <Sparkles size={14} className="text-[#1C9BD0]" />
                   <span>Right Now</span>
                 </h3>
                 <span className="text-[8px] bg-slate-800 text-slate-300 font-bold px-1.5 py-0.5 rounded border border-slate-700">
@@ -579,7 +579,7 @@ const MainDashboard = () => {
         {/* GOOGLE MAPS DISTRIBUTION & DEMAND */}
         <div className="admin-card">
           <h3 className="text-xs text-[#0B1220] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-bold">
-            <MapPin size={14} className="text-[#FFC400]" />
+            <MapPin size={14} className="text-[#1C9BD0]" />
             <span>Operational Demand Distribution</span>
           </h3>
           <p className="text-[11px] text-[#64748B] mb-4">

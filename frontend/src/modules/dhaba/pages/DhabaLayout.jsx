@@ -51,7 +51,7 @@ const DhabaLayout = () => {
             </div>
             <div className="min-w-0">
               <p className="truncate text-sm font-black text-slate-900">{dhaba?.name || 'Dhaba Partner'}</p>
-              <p className="truncate text-[10px] font-bold uppercase tracking-wider text-slate-400">ZI Bus partner panel</p>
+              <p className="truncate text-[10px] font-bold uppercase tracking-wider text-slate-400">Ludo Hut Bus partner panel</p>
             </div>
           </div>
           <div className="flex items-center gap-2">

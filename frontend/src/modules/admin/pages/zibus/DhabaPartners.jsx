@@ -274,7 +274,7 @@ const DhabaPartners = () => {
       <div className="mx-auto max-w-6xl space-y-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-orange-500">ZI Bus · Food</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-orange-500">Ludo Hut Bus · Food</p>
             <h1 className="mt-2 text-3xl font-black tracking-tight text-slate-900">Dhaba Partners</h1>
             <p className="mt-2 max-w-2xl text-sm font-medium text-slate-500">
               Highway dhabas passengers can pre-order from. Dhabas apply at <span className="font-black text-slate-700">/dhaba/register</span>, you approve them here, and they sign in at <span className="font-black text-slate-700">/dhaba/login</span> to manage their menu and orders.

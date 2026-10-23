@@ -1,5 +1,5 @@
 /**
- * Seed the ZI Bus catalog: AC / non-AC, seater / sleeper / semi-sleeper /
+ * Seed the Ludo Hut Bus catalog: AC / non-AC, seater / sleeper / semi-sleeper /
  * Volvo coaches on real central-India routes, each with a return run.
  *
  * Goes through the admin bus service (same validation as the admin panel).
@@ -188,7 +188,7 @@ const route = (rows) => rows.map(([key, stopType, km, mealHalt]) => {
 
 const CATALOG = [
   {
-    serviceNumber: 'ZB-IND-DEL-01', operatorName: 'ZI Bus Express', busName: 'Indore - Delhi Sleeper Express',
+    serviceNumber: 'ZB-IND-DEL-01', operatorName: 'Ludo Hut Bus Express', busName: 'Indore - Delhi Sleeper Express',
     registrationNumber: 'MP09ZB1001', coach: 'acSleeper', fares: { sleeper: 1499 }, busColor: '#1f2937',
     routeName: 'Indore to Delhi via Gwalior & Agra',
     points: route([
@@ -198,7 +198,7 @@ const CATALOG = [
     departures: ['17:30', '20:00'], returnDepartures: ['18:00'],
   },
   {
-    serviceNumber: 'ZB-IND-BPL-01', operatorName: 'ZI Bus Volvo', busName: 'Indore - Bhopal Volvo Shuttle',
+    serviceNumber: 'ZB-IND-BPL-01', operatorName: 'Ludo Hut Bus Volvo', busName: 'Indore - Bhopal Volvo Shuttle',
     registrationNumber: 'MP09ZB1002', coach: 'volvoSeater', fares: { window: 599, aisle: 549 }, busColor: '#0f766e',
     routeName: 'Indore to Bhopal via Dewas & Sehore',
     points: route([
@@ -208,7 +208,7 @@ const CATALOG = [
     departures: ['06:00', '10:00', '14:00', '18:00'], returnDepartures: ['07:00', '11:00', '15:00', '19:00'],
   },
   {
-    serviceNumber: 'ZB-IND-UJN-01', operatorName: 'ZI Bus Rapid', busName: 'Indore - Ujjain Mahakal Express',
+    serviceNumber: 'ZB-IND-UJN-01', operatorName: 'Ludo Hut Bus Rapid', busName: 'Indore - Ujjain Mahakal Express',
     registrationNumber: 'MP13ZB1003', coach: 'nonAcSeater', fares: { window: 130, aisle: 120 }, busColor: '#b45309',
     routeName: 'Indore to Ujjain via Sanwer',
     points: route([
@@ -218,7 +218,7 @@ const CATALOG = [
     returnDepartures: ['07:00', '09:00', '11:00', '13:00', '15:00', '17:00', '19:00', '21:00'],
   },
   {
-    serviceNumber: 'ZB-IND-BOM-01', operatorName: 'ZI Bus Volvo', busName: 'Indore - Mumbai Volvo Sleeper',
+    serviceNumber: 'ZB-IND-BOM-01', operatorName: 'Ludo Hut Bus Volvo', busName: 'Indore - Mumbai Volvo Sleeper',
     registrationNumber: 'MP09ZB1004', coach: 'volvoSleeper', fares: { sleeper: 1599 }, busColor: '#1e3a8a',
     routeName: 'Indore to Mumbai via Dhule & Nashik',
     points: route([
@@ -228,7 +228,7 @@ const CATALOG = [
     departures: ['19:30', '21:00'], returnDepartures: ['18:30', '20:30'],
   },
   {
-    serviceNumber: 'ZB-IND-AMD-01', operatorName: 'ZI Bus Express', busName: 'Indore - Ahmedabad Non-AC Sleeper',
+    serviceNumber: 'ZB-IND-AMD-01', operatorName: 'Ludo Hut Bus Express', busName: 'Indore - Ahmedabad Non-AC Sleeper',
     registrationNumber: 'MP09ZB1005', coach: 'nonAcSleeper', fares: { sleeper: 749 }, busColor: '#7c2d12',
     routeName: 'Indore to Ahmedabad via Dhar & Dahod',
     points: route([
@@ -238,7 +238,7 @@ const CATALOG = [
     departures: ['21:30'], returnDepartures: ['20:30'],
   },
   {
-    serviceNumber: 'ZB-IND-JAI-01', operatorName: 'ZI Bus Gold', busName: 'Indore - Jaipur AC Sleeper',
+    serviceNumber: 'ZB-IND-JAI-01', operatorName: 'Ludo Hut Bus Gold', busName: 'Indore - Jaipur AC Sleeper',
     registrationNumber: 'MP09ZB1006', coach: 'acSleeper', fares: { sleeper: 1199 }, busColor: '#831843',
     routeName: 'Indore to Jaipur via Ujjain & Kota',
     points: route([
@@ -248,7 +248,7 @@ const CATALOG = [
     departures: ['18:30'], returnDepartures: ['19:00'],
   },
   {
-    serviceNumber: 'ZB-IND-PNQ-01', operatorName: 'ZI Bus Rapid', busName: 'Indore - Pune Non-AC Sleeper',
+    serviceNumber: 'ZB-IND-PNQ-01', operatorName: 'Ludo Hut Bus Rapid', busName: 'Indore - Pune Non-AC Sleeper',
     registrationNumber: 'MP09ZB1007', coach: 'nonAcSleeper', fares: { sleeper: 899 }, busColor: '#365314',
     routeName: 'Indore to Pune via Dhule & Nashik',
     points: route([
@@ -258,7 +258,7 @@ const CATALOG = [
     departures: ['18:00'], returnDepartures: ['17:30'],
   },
   {
-    serviceNumber: 'ZB-BPL-JBP-01', operatorName: 'ZI Bus Gold', busName: 'Bhopal - Jabalpur Semi Sleeper',
+    serviceNumber: 'ZB-BPL-JBP-01', operatorName: 'Ludo Hut Bus Gold', busName: 'Bhopal - Jabalpur Semi Sleeper',
     registrationNumber: 'MP04ZB1008', coach: 'semiSleeper', fares: { window: 699, aisle: 649, sleeper: 849 }, busColor: '#4c1d95',
     routeName: 'Bhopal to Jabalpur via Obedullaganj & Narsinghpur',
     points: route([
@@ -268,7 +268,7 @@ const CATALOG = [
     departures: ['22:00'], returnDepartures: ['22:30'],
   },
   {
-    serviceNumber: 'ZB-GWL-DEL-01', operatorName: 'ZI Bus Express', busName: 'Gwalior - Delhi AC Seater',
+    serviceNumber: 'ZB-GWL-DEL-01', operatorName: 'Ludo Hut Bus Express', busName: 'Gwalior - Delhi AC Seater',
     registrationNumber: 'MP07ZB1009', coach: 'acSeater', fares: { window: 649, aisle: 599 }, busColor: '#0c4a6e',
     routeName: 'Gwalior to Delhi via Agra & Mathura',
     points: route([

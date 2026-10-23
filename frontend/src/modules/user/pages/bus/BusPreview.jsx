@@ -90,7 +90,7 @@ const BusPreview = () => {
                 ) : (
                   <p className="zb-text text-base font-extrabold">New</p>
                 )}
-                <p className="zb-muted text-[10px] font-bold">{Number(bus.ratingCount || 0) > 0 ? `${bus.ratingCount} ratings` : 'on ZI Bus'}</p>
+                <p className="zb-muted text-[10px] font-bold">{Number(bus.ratingCount || 0) > 0 ? `${bus.ratingCount} ratings` : 'on Ludo Hut Bus'}</p>
               </div>
             </div>
           </div>

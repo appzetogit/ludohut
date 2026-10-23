@@ -13,6 +13,6 @@ const registry = new Map(CONNECTORS.map((connector) => [connector.type, connecto
 export const getConnector = (type) => registry.get(String(type || '')) || null;
 
 export const listConnectorTypes = () => [
-  { type: 'push_api', label: 'They call the ZI Bus channel API' },
+  { type: 'push_api', label: 'They call the Ludo Hut Bus channel API' },
   ...CONNECTORS.map((connector) => ({ type: connector.type, label: connector.label })),
 ];

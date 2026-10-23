@@ -14,7 +14,7 @@ const busOperatorSchema = new mongoose.Schema(
     email: { type: String, default: '', trim: true, lowercase: true },
     address: { type: String, default: '', trim: true },
     city: { type: String, default: '', trim: true },
-    // ZI Bus's share of each ticket sold on ZI Bus for this company's buses.
+    // Ludo Hut Bus's share of each ticket sold on Ludo Hut Bus for this company's buses.
     commissionPercent: { type: Number, default: 10, min: 0, max: 100 },
     ownerIds: {
       type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'TaxiOwner' }],

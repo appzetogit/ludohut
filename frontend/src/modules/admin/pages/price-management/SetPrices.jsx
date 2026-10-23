@@ -815,7 +815,7 @@ const SetPrices = ({ mode }) => {
 
             <div className="bg-white rounded-md border border-gray-100 shadow-sm p-2 relative">
                <div className="flex justify-end mb-2">
-                  <button type="button" onClick={() => setShowHowItWorks(true)} className="text-[10px] font-bold text-[#00BFA5] underline decoration-dotted underline-offset-4">How It Works</button>
+                  <button type="button" onClick={() => setShowHowItWorks(true)} className="text-[10px] font-bold text-[#1C9BD0] underline decoration-dotted underline-offset-4">How It Works</button>
                </div>
 
                <form onSubmit={handleSave} className="space-y-2">
@@ -1047,27 +1047,27 @@ const SetPrices = ({ mode }) => {
                      </div>
                      <div className="space-y-3 text-xs text-gray-600">
                        <div>
-                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><MapPin size={12} className="text-[#00BFA5]"/> Zone</p>
+                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><MapPin size={12} className="text-[#1C9BD0]"/> Zone</p>
                          <p className="leading-snug text-gray-500 pl-4.5">Select the geographical area where this pricing applies.</p>
                        </div>
                        <div>
-                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><Car size={12} className="text-[#00BFA5]"/> Vehicle Type</p>
+                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><Car size={12} className="text-[#1C9BD0]"/> Vehicle Type</p>
                          <p className="leading-snug text-gray-500 pl-4.5">The vehicle category (e.g. Mini, SUV). This automatically sets the transport type.</p>
                        </div>
                        <div>
-                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><CreditCard size={12} className="text-[#00BFA5]"/> Payment Type</p>
+                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><CreditCard size={12} className="text-[#1C9BD0]"/> Payment Type</p>
                          <p className="leading-snug text-gray-500 pl-4.5">Allowed payment methods for this ride type.</p>
                        </div>
                        <div>
-                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><DollarSign size={12} className="text-[#00BFA5]"/> Commission</p>
+                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><DollarSign size={12} className="text-[#1C9BD0]"/> Commission</p>
                          <p className="leading-snug text-gray-500 pl-4.5">Platform earnings rules for drivers and fleet owners.</p>
                        </div>
                        <div>
-                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><ShieldCheck size={12} className="text-[#00BFA5]"/> Cancellation Fee</p>
+                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><ShieldCheck size={12} className="text-[#1C9BD0]"/> Cancellation Fee</p>
                          <p className="leading-snug text-gray-500 pl-4.5">Charges applied if the user or driver cancels the ride.</p>
                        </div>
                        <div>
-                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><Globe size={12} className="text-[#00BFA5]"/> Airport / Outstation</p>
+                         <p className="font-bold text-gray-800 mb-0.5 flex items-center gap-1.5"><Globe size={12} className="text-[#1C9BD0]"/> Airport / Outstation</p>
                          <p className="leading-snug text-gray-500 pl-4.5">Enable toggles to add special pricing rules for airport trips or inter-city outstation rides.</p>
                        </div>
                      </div>

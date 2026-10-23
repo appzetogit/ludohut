@@ -17,7 +17,7 @@ const Stat = ({ label, value, tone = 'text-slate-900', note }) => (
   </div>
 );
 
-/// What the dhaba has earned on served orders, what ZI Bus has paid out and
+/// What the dhaba has earned on served orders, what Ludo Hut Bus has paid out and
 /// what is still due.
 const DhabaEarnings = () => {
   const [ledger, setLedger] = useState(null);
@@ -39,7 +39,7 @@ const DhabaEarnings = () => {
         <Stat label="Upcoming orders" value={rupees(ledger.openAmount)} note={`${ledger.openOrders} not served yet`} />
       </div>
       <p className="text-xs font-medium text-slate-500">
-        Earnings are the food amount of served orders less the ZI Bus commission ({rupees(ledger.commission)} so far). Orders count once you mark them served.
+        Earnings are the food amount of served orders less the Ludo Hut Bus commission ({rupees(ledger.commission)} so far). Orders count once you mark them served.
       </p>
 
       <section className="rounded-3xl border border-slate-100 bg-white p-5 shadow-sm">

@@ -1,8 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
+/* Ludo Hut brand palette. The panel was built with Tailwind's yellow as its
+   brand accent and indigo as its secondary, across ~1,800 class names;
+   Tailwind 4 reads every utility from these variables, so redefining them
+   here re-themes all of it to the logo blue without touching the pages.
+   Amber/orange stay as they are: they mean "warning", not "brand".
+   body:has() carries it to modals that portal out of the admin root. */
+.redigo-admin-root,
+body:has(.redigo-admin-root) {
+  --color-yellow-50: #EEF8FD;
+  --color-yellow-100: #D8F0FA;
+  --color-yellow-200: #B2E2F4;
+  --color-yellow-300: #7ACFE9;
+  --color-yellow-400: #3FB4DE;
+  --color-yellow-500: #1C9BD0;
+  --color-yellow-600: #0F81B6;
+  --color-yellow-700: #0E6893;
+  --color-yellow-800: #115677;
+  --color-yellow-900: #134863;
+  --color-yellow-950: #0B2E42;
+
+  --color-indigo-50: #EDF6FC;
+  --color-indigo-100: #D6ECF8;
+  --color-indigo-200: #ADD9F1;
+  --color-indigo-300: #74BFE5;
+  --color-indigo-400: #3AA3D6;
+  --color-indigo-500: #1A88C2;
+  --color-indigo-600: #0F72A8;
+  --color-indigo-700: #0E5C88;
+  --color-indigo-800: #104C6F;
+  --color-indigo-900: #12405C;
+  --color-indigo-950: #0A283B;
+}
+
 .redigo-admin-root {
   --admin-sidebar: #05070D;
-  --admin-accent: #FFC400;
+  --admin-accent: #1C9BD0;
   --admin-bg: #F6F8FC;
   --admin-card: #FFFFFF;
   --admin-text: #0B1220;

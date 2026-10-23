@@ -1,4 +1,4 @@
-// Formatting and date helpers shared by the ZI Bus passenger screens.
+// Formatting and date helpers shared by the Ludo Hut Bus passenger screens.
 
 export const formatRupees = (value) =>
   `₹${Number(value || 0).toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;

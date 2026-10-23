@@ -220,7 +220,7 @@ const DhabaRegister = () => {
             <UtensilsCrossed size={18} />
           </div>
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500">ZI Bus</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500">Ludo Hut Bus</p>
             <p className="text-sm font-black text-slate-900">Dhaba Partners</p>
           </div>
         </div>
@@ -235,7 +235,7 @@ const DhabaRegister = () => {
             Register your dhaba and serve hungry bus passengers
           </h1>
           <p className="mt-3 max-w-2xl text-sm font-medium leading-relaxed text-slate-600 sm:text-base">
-            ZI Bus passengers pre-order meals from dhabas on their route. Fill in the form below and we will review it.
+            Ludo Hut Bus passengers pre-order meals from dhabas on their route. Fill in the form below and we will review it.
           </p>
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             {BENEFITS.map(({ icon, title, text }) => (
@@ -401,7 +401,7 @@ const DhabaRegister = () => {
             <label className="flex items-start gap-3 text-sm font-medium text-slate-600">
               <input type="checkbox" checked={agree} onChange={(event) => setAgree(event.target.checked)} className="mt-1 h-4 w-4 accent-orange-500" />
               <span>
-                The details above are correct and I am authorised to register this dhaba. I understand ZI Bus will verify the FSSAI licence before approving.
+                The details above are correct and I am authorised to register this dhaba. I understand Ludo Hut Bus will verify the FSSAI licence before approving.
               </span>
             </label>
             {error ? <p className="mt-4 rounded-xl bg-rose-50 px-4 py-3 text-sm font-bold text-rose-600">{error}</p> : null}

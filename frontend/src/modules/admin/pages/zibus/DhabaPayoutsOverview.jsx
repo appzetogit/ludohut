@@ -32,7 +32,7 @@ const DhabaPayoutsOverview = ({ refreshKey, onOpen }) => {
     <div className="space-y-5">
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
         <Total label="Food sales (served)" value={rupees(totals.gross)} />
-        <Total label="ZI Bus commission" value={rupees(totals.commission)} tone="text-blue-700" />
+        <Total label="Ludo Hut Bus commission" value={rupees(totals.commission)} tone="text-blue-700" />
         <Total label="Owed to dhabas" value={rupees(totals.earned)} />
         <Total label="Paid out" value={rupees(totals.paid)} />
         <Total label="Balance due" value={rupees(totals.balance)} tone="text-emerald-600" />

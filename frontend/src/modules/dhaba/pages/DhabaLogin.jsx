@@ -34,7 +34,7 @@ const DhabaLogin = () => {
             <UtensilsCrossed size={20} />
           </div>
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500">ZI Bus</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500">Ludo Hut Bus</p>
             <h1 className="text-xl font-black text-slate-900">Dhaba Partner Login</h1>
           </div>
         </div>
@@ -75,7 +75,7 @@ const DhabaLogin = () => {
           {busy ? <Loader2 size={16} className="animate-spin" /> : null} Sign in
         </button>
         <p className="text-center text-xs font-semibold text-slate-500">
-          New to ZI Bus?{' '}
+          New to Ludo Hut Bus?{' '}
           <Link to="/dhaba/register" className="font-black text-orange-600">
             Register your dhaba
           </Link>

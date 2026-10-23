@@ -20,7 +20,7 @@ const Motion = motion;
 const LIST_PATH = '/admin/promotions/send-notification';
 const CREATE_PATH = '/admin/promotions/send-notification/create';
 const inputClass =
-  'w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-800 bg-white focus:border-[#FFC400] focus:ring-1 focus:ring-[#FFC400] outline-none transition-colors disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed';
+  'w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-800 bg-white focus:border-[#1C9BD0] focus:ring-1 focus:ring-[#1C9BD0] outline-none transition-colors disabled:bg-gray-50 disabled:text-gray-400 disabled:cursor-not-allowed';
 const labelClass = 'block text-xs font-semibold text-gray-500 mb-1.5';
 
 const createInitialFormData = () => ({
@@ -273,7 +273,7 @@ const SendNotification = () => {
                   <button
                     type="button"
                     onClick={() => navigate(CREATE_PATH)}
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold !text-[#0B1220] !bg-[#FFC400] border-none rounded-lg hover:brightness-95 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold !text-[#0B1220] !bg-[#1C9BD0] border-none rounded-lg hover:brightness-95 transition-colors"
                   >
                     <Plus size={16} /> Create Push Notification
                   </button>
@@ -507,7 +507,7 @@ const SendNotification = () => {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="w-full py-3 !bg-[#FFC400] !text-[#0B1220] rounded-lg text-sm font-bold hover:brightness-95 border-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
+                  className="w-full py-3 !bg-[#1C9BD0] !text-[#0B1220] rounded-lg text-sm font-bold hover:brightness-95 border-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
                 >
                   {saving ? <Loader2 className="animate-spin" size={16} /> : <Send size={16} />}
                   Send Notification

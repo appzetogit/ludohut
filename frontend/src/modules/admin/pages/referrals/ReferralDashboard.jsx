@@ -238,7 +238,7 @@ const ReferralDashboard = () => {
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <ChartContainer title="Driver Referrals Overview">
                <PieChartMock 
-                 color1="#FACC15" /* yellow-400 */
+                 color1="#3FB4DE" /* yellow-400 */
                  color2="#E5E7EB" /* gray-200 */
                  label1="Referral Driver" 
                  label2="Normal Driver" 
@@ -248,7 +248,7 @@ const ReferralDashboard = () => {
             </ChartContainer>
             <ChartContainer title="Driver Monthly Referrals">
                <LineChartMock 
-                 color="#FACC15" /* yellow-400 */
+                 color="#3FB4DE" /* yellow-400 */
                  data={data?.driver_referrals?.monthly || emptyMonthly} 
                />
             </ChartContainer>

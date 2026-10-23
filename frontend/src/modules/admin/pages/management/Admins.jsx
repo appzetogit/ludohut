@@ -45,7 +45,7 @@ import { createPortal } from 'react-dom';
 import { buildMenuPermissionTree, expandMenuPermissions, menuKeysForAdmin } from '../../constants/adminAccess';
 import AdminAccountForm from './AdminAccountForm';
 
-const BAR_COLORS = ['bg-[#FFC400]', 'bg-blue-500', 'bg-emerald-500', 'bg-purple-500', 'bg-pink-500', 'bg-slate-400'];
+const BAR_COLORS = ['bg-[#1C9BD0]', 'bg-blue-500', 'bg-emerald-500', 'bg-purple-500', 'bg-pink-500', 'bg-slate-400'];
 
 const Admins = () => {
   const navigate = useNavigate();
@@ -395,7 +395,7 @@ const Admins = () => {
     });
 
     const colors = {
-      'Super Admin': '#FFC400',
+      'Super Admin': '#1C9BD0',
       'Operations': '#3B82F6',
       'Finance': '#10B981',
       'Support': '#8B5CF6',
@@ -711,7 +711,7 @@ const Admins = () => {
             </div>
             <div className="flex items-center gap-2">
               <h1 className="text-2xl font-bold text-[#0B1220] tracking-tight">Admin Control Center</h1>
-              <span className="bg-[#FFC400]/20 text-[#0B1220] text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-[#FFC400]/40">
+              <span className="bg-[#1C9BD0]/20 text-[#0B1220] text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-[#1C9BD0]/40">
                 Hub
               </span>
             </div>
@@ -740,7 +740,7 @@ const Admins = () => {
                 setForm(initialFormState);
                 setIsCreateOpen(true);
               }}
-              className="admin-btn-primary h-10 gap-2 !bg-[#FFC400] !text-[#0B1220] hover:brightness-95"
+              className="admin-btn-primary h-10 gap-2 !bg-[#1C9BD0] !text-[#0B1220] hover:brightness-95"
             >
               <Plus size={16} />
               <span>Create Admin</span>
@@ -792,7 +792,7 @@ const Admins = () => {
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <h3 className="text-xs text-[#0B1220] uppercase tracking-wider font-bold">Historical Admin Growth</h3>
-                  <div className="h-1.5 w-1.5 rounded-full bg-[#FFC400]" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#1C9BD0]" />
                 </div>
                 <select
                   value={growthFilter}
@@ -832,7 +832,7 @@ const Admins = () => {
                     {/* Shimmer Area Fill */}
                     <path d={areaPath} fill="rgba(255, 196, 0, 0.05)" />
                     {/* Area Outline */}
-                    <path d={linePath} fill="none" stroke="#FFC400" strokeWidth="2.5" />
+                    <path d={linePath} fill="none" stroke="#1C9BD0" strokeWidth="2.5" />
 
                     {/* Nodes */}
                     {growthPoints.map((pt, idx) => (
@@ -841,8 +841,8 @@ const Admins = () => {
                         cx={pt.x}
                         cy={pt.y}
                         r={hoveredGrowthIndex === idx ? 6 : 4}
-                        fill={hoveredGrowthIndex === idx ? '#FFC400' : '#FFFFFF'}
-                        stroke="#FFC400"
+                        fill={hoveredGrowthIndex === idx ? '#1C9BD0' : '#FFFFFF'}
+                        stroke="#1C9BD0"
                         strokeWidth="2"
                         className="cursor-pointer transition-all"
                         onMouseEnter={() => setHoveredGrowthIndex(idx)}
@@ -1014,7 +1014,7 @@ const Admins = () => {
                 )}
                 {recorded.recent.map((row) => ({ ...describeActivity(row), time: timeAgo(row.at) })).map((act, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-[11px] border-l border-[#E5E7EB] pl-3 relative ml-1.5">
-                    <div className="absolute -left-[3.5px] top-1 w-1.5 h-1.5 rounded-full bg-[#FFC400]" />
+                    <div className="absolute -left-[3.5px] top-1 w-1.5 h-1.5 rounded-full bg-[#1C9BD0]" />
                     <div className="flex-1">
                       <p className="font-semibold text-[#0B1220]">{act.title}</p>
                       <p className="text-[10px] text-slate-400 mt-0.5">{act.desc} · {act.time}</p>
@@ -1235,7 +1235,7 @@ const Admins = () => {
                       type="checkbox"
                       onChange={handleSelectAllRows}
                       checked={filteredAndSortedAdmins.length > 0 && selectedRowIds.length === filteredAndSortedAdmins.length}
-                      className="rounded border-[#E5E7EB] text-[#FFC400] focus:ring-[#FFC400] h-4.5 w-4.5 cursor-pointer"
+                      className="rounded border-[#E5E7EB] text-[#1C9BD0] focus:ring-[#1C9BD0] h-4.5 w-4.5 cursor-pointer"
                     />
                   </th>
                   <th>Admin</th>
@@ -1278,7 +1278,7 @@ const Admins = () => {
                             type="checkbox"
                             checked={selectedRowIds.includes(id)}
                             onChange={(e) => handleSelectRow(id, e.target.checked)}
-                            className="rounded border-[#E5E7EB] text-[#FFC400] focus:ring-[#FFC400] h-4.5 w-4.5 cursor-pointer"
+                            className="rounded border-[#E5E7EB] text-[#1C9BD0] focus:ring-[#1C9BD0] h-4.5 w-4.5 cursor-pointer"
                           />
                         </td>
 
@@ -1287,7 +1287,7 @@ const Admins = () => {
                           <div className="flex items-center gap-3">
                             <div
                               onClick={toggleExpand}
-                              className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border cursor-pointer select-none ${isSuper ? 'bg-[#FFC400]/10 border-[#FFC400]/40 text-[#0B1220]' : 'bg-slate-50 border-slate-200 text-[#0B1220]'}`}
+                              className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border cursor-pointer select-none ${isSuper ? 'bg-[#1C9BD0]/10 border-[#1C9BD0]/40 text-[#0B1220]' : 'bg-slate-50 border-slate-200 text-[#0B1220]'}`}
                             >
                               {admin.name?.[0]?.toUpperCase() || <Shield size={14} />}
                             </div>
@@ -1312,11 +1312,11 @@ const Admins = () => {
                         <td>
                           <div className="flex items-center gap-1">
                             {isSuper ? (
-                              <Crown size={11} className="text-[#FFC400]" />
+                              <Crown size={11} className="text-[#1C9BD0]" />
                             ) : (
                               <Shield size={11} className="text-slate-400" />
                             )}
-                            <span className={`text-[10px] font-bold uppercase tracking-wider ${isSuper ? 'text-[#FFC400]' : 'text-slate-600'}`}>
+                            <span className={`text-[10px] font-bold uppercase tracking-wider ${isSuper ? 'text-[#1C9BD0]' : 'text-slate-600'}`}>
                               {isSuper ? 'Super Admin' : (admin.role || 'Personnel')}
                             </span>
                           </div>
@@ -1400,7 +1400,7 @@ const Admins = () => {
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
-                              className="bg-white border-l-4 border-l-[#FFC400] border border-[#E5E7EB] rounded-r-xl p-6 shadow-sm space-y-6 font-sans text-xs text-[#0B1220] overflow-hidden"
+                              className="bg-white border-l-4 border-l-[#1C9BD0] border border-[#E5E7EB] rounded-r-xl p-6 shadow-sm space-y-6 font-sans text-xs text-[#0B1220] overflow-hidden"
                             >
                               <div className="flex items-center justify-between border-b border-[#F1F5F9] pb-3">
                                 <div className="flex items-center gap-3">
@@ -1491,7 +1491,7 @@ const Admins = () => {
                                     setIsDrawerOpen(false);
                                     handleEditClick(selectedAdmin);
                                   }}
-                                  className="admin-btn-primary h-9 px-4 gap-1.5 !bg-[#FFC400] !text-[#0B1220] text-xs font-bold shrink-0 self-end"
+                                  className="admin-btn-primary h-9 px-4 gap-1.5 !bg-[#1C9BD0] !text-[#0B1220] text-xs font-bold shrink-0 self-end"
                                 >
                                   <span>Modify Privileges</span>
                                 </button>
@@ -1509,7 +1509,7 @@ const Admins = () => {
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
-                              className="bg-white border-l-4 border-l-[#FFC400] border border-[#E5E7EB] rounded-r-xl shadow-sm space-y-4 font-sans text-xs text-[#0B1220] overflow-hidden"
+                              className="bg-white border-l-4 border-l-[#1C9BD0] border border-[#E5E7EB] rounded-r-xl shadow-sm space-y-4 font-sans text-xs text-[#0B1220] overflow-hidden"
                             >
                               <div className="p-5 border-b border-[#E5E7EB] flex items-center justify-between bg-slate-50">
                                 <h3 className="text-xs font-bold text-[#0B1220] uppercase tracking-wider">Modify Administrative Privileges</h3>
